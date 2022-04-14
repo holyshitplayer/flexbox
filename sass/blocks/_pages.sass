@@ -1,0 +1,106 @@
+.pages
+    &__block
+        padding: 50px 0
+        &:last-child
+            padding-bottom: 0
+        &__title
+            text-align: center
+            margin: 0
+            font-size: 1.5rem
+            line-height: 1
+            margin-bottom: 25px
+            +bold
+            span
+                display: block
+                color: #0000fe
+                font-size: 1rem
+                +regular
+        &__content
+            display: flex
+            align-items: center
+            flex-direction: column
+            row-gap: 20px
+        &__text
+            margin: 0
+            text-align: center
+    &__properties
+        width: 100%
+        display: flex
+        align-items: center
+        column-gap: 30px
+    &__properties
+        &__block
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            width: calc( 50% - 15px )
+        &__title
+            margin: 0
+            padding: 0
+            font-size: 1.125rem
+            +bold
+    &__scheme
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        column-gap: 10px
+        padding: 10px
+        border-radius: 5px
+        margin-bottom: 20px
+        &.container
+            background: linear-gradient(135deg, rgb(19, 12, 183) 0%, rgba(151,8,204,1) 100%)
+            box-shadow: 0px 0px 8px 8px rgba(19, 12, 183, 0.2)
+            div
+                background-color: #ffffff
+                opacity: 0.5
+        &.items
+            background-color: rgba(0, 0, 254, 0.05)
+            div
+                background: linear-gradient(135deg, rgb(19, 12, 183) 0%, rgba(151,8,204,1) 100%)
+                box-shadow: 0px 0px 8px 8px rgba(151,8,204, 0.2)
+        div
+            width: calc( 25% - 7.5px )
+            height: 64px
+            border-radius: 5px
+            transition: transform .15s ease
+            &:hover
+                transform: translateY(-1.5px)
+        &__title
+            margin: 5px 0
+            padding: 0
+            +bold
+            &.container
+                color: #130CB7
+            &.items
+                color: #9708CC
+    &__examples
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        column-gap: 20px
+    &__example
+        text-align: center
+        width: calc( 25% - (80/3)px )
+        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.1)
+        border-radius: 5px
+        &__image
+            img
+                border-top-left-radius: 5px
+                border-top-right-radius: 5px
+                width: 100%
+                display: block
+        &__content
+            padding: 20px
+        &__title
+            font-size: 1.125rem
+            margin: 0 0 20px 0
+            display: block
+            transition: color .15s ease
+            +bold
+            &:hover
+                color: #0000fe
+        &__description
+            margin: 0
