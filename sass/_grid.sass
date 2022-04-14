@@ -1,0 +1,137 @@
+@media (max-width: 1200px)
+    .hero
+        &__text
+            h1
+                font-size: 2rem
+        &__illustration
+            &__scheme
+                width: 100%
+                div
+                    height: 150px
+    
+@media (max-width: 992px)
+    .header
+        &__links
+            flex-wrap: wrap-reverse
+            &__logo
+                order: 2
+        &__menu
+            &__open-menu
+                order: 1
+                display: block
+            &__close-menu
+                display: block
+            ul
+                display: flex
+                flex-direction: column
+                list-style-type: none
+                align-items: normal
+                li
+                    margin-right: 0
+            &__link
+                transition: color .15s ease
+                position: relative
+                padding: 0
+                &::before
+                    content: ''
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    background-color: #0b0c32
+                    height: 2px
+                    width: 0
+                    transition: width .15s ease
+                &:focus
+                    &::before
+                        width: 100%
+                &.active
+                    &::after
+                        content: none
+    .hero
+        &__illustration
+            &__scheme
+                transform: skew(0, 0)
+                div
+                    height: 125px
+    .pages
+        &__scheme
+            div
+                height: 56px
+        &__example
+            width: calc( 100% / 3 - (60/2)px )
+            &:last-child
+                display: none
+
+@media (max-width: 768px)
+    .hero
+        &__text
+            width: 100%
+            text-align: center
+        &__illustration
+            display: none
+    .pages
+        &__block
+            padding: 30px 0
+            &__title
+                margin-bottom: 15px
+        &__properties
+            flex-wrap: wrap
+            row-gap: 20px
+            &__block
+                width: 100%
+        &__scheme
+            margin-bottom: 10px
+            &__title
+                margin: 0 0 5px 0
+    .footer
+        margin-top: 50px
+
+@media (max-width: 576px)
+    body
+        font-size: 0.875rem
+    .header
+        &__menu
+            &__open-menu
+                padding: 19.82px 0
+            &__link
+                font-size: 1rem
+        &__links
+            &__logo
+                padding: 4.4px 0
+    .hero
+        &__text
+            h1
+                margin: 0 0 20px 0
+                font-size: 1.25rem
+    .pages
+        &__block
+            &__title
+                font-size: 1.125rem
+                margin-bottom: 15px
+                span
+                    font-size: 0.875rem
+            &__content
+                row-gap: 10px
+        &__properties
+            &__title
+                font-size: 1rem
+        &__scheme
+            div
+                height: 48px
+        &__example
+            &:nth-last-child(2)
+                display: none
+            &__content
+                padding: 10px
+            &__title
+                font-size: 1rem
+                margin: 0 0 10px 0
+    .footer
+        text-align: center
+    .mm-spn.mm-spn--navbar.mm-spn--main:after
+        font-size: 1rem
+
+@media (max-width: 375px)
+    .pages
+        &__examples
+            display: none
