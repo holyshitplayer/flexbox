@@ -13,16 +13,20 @@
 <body>
     <header class="header">
         <div class="container">
-            <nav class="header__links">
+            <div class="header__links">
                 <a class="header__links__logo" href="index.html">Flexbox</a>
-                <ul>
-                    <li><a class="header__links__link" href="index.html">Главная</a></li>
-                    <li><a class="header__links__link" href="theory.html">Терминология</a></li>
-                    <li><a class="header__links__link" href="container.html">Свойства для контейнера</a></li>
-                    <li><a class="header__links__link" href="items.html">Свойства для элементов</a></li>
-                    <li><a class="header__links__link" href="examples.html">Примеры</a></li>
-                </ul>
-            </nav>
+                <a class="header__menu__open-menu" href="#menu"><img src="img/menu-btn.svg" alt="Open menu"></a>
+                <nav class="header__menu">
+                    <div class="header__menu__close-menu"><img src="img/menu-close-btn.svg" alt="Close menu"></div>
+                    <ul>
+                        <li><a class="header__menu__link" href="index.html">Главная</a></li>
+                        <li><a class="header__menu__link" href="theory.html">Терминология</a></li>
+                        <li><a class="header__menu__link" href="container.html">Свойства для контейнера</a></li>
+                        <li><a class="header__menu__link" href="items.html">Свойства для элементов</a></li>
+                        <li><a class="header__menu__link" href="examples.html">Примеры</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -36,7 +40,7 @@
         </div>
     </footer>
 
-<script src="js/script.js"></script>
-<script src="libs/mmenu-light.js"></script>
+    <script src="js/script.js"></script>
+    <script src="libs/mmenu-light.js"></script>
 </body>
 </html>

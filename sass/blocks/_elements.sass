@@ -1,0 +1,18 @@
+.elements
+    position: sticky
+    top: 0
+    z-index: -100
+    &__element
+        width: 64px
+        opacity: 0.2
+        position: absolute
+        animation: spin 10s infinite 
+        animation-timing-function: ease-in-out;
+
+@keyframes spin
+    0%
+        transform: translateY(-32px) rotate(0deg)
+    50%
+        transform: translateY(32px) rotate(180deg)
+    100%
+        transform: translateY(-32px) rotate(360deg)
