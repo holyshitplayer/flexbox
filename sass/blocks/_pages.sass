@@ -1,6 +1,8 @@
 .pages
     &__block
         padding: 50px 0
+        &:first-child
+            padding-top: 0
         &:last-child
             padding-bottom: 0
         &__title
@@ -8,7 +10,7 @@
             margin: 0
             font-size: 1.5rem
             line-height: 1
-            margin-bottom: 25px
+            margin-bottom: 20px
             +bold
             span
                 display: block
@@ -19,15 +21,17 @@
             display: flex
             align-items: center
             flex-direction: column
-            row-gap: 20px
         &__text
             margin: 0
             text-align: center
+        &__link
+            margin-top: 20px
     &__properties
         width: 100%
         display: flex
         align-items: center
         column-gap: 30px
+        margin-top: 20px
         &__block
             display: flex
             align-items: center
@@ -47,7 +51,6 @@
         column-gap: 10px
         padding: 10px
         border-radius: 5px
-        margin-bottom: 20px
         &.container
             background: linear-gradient(135deg, rgb(19, 12, 183) 0%, rgba(151,8,204,1) 100%)
             box-shadow: 0px 0px 8px 8px rgba(19, 12, 183, 0.2)
@@ -79,10 +82,11 @@
         display: flex
         justify-content: space-between
         align-items: center
-        column-gap: 20px
+        column-gap: 30px
+        margin-top: 20px
     &__example
         text-align: center
-        width: calc( 25% - (80/3)px )
+        width: calc( 25% - 24.5px )
         box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.1)
         border-radius: 5px
         &__image

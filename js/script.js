@@ -2,8 +2,12 @@ let menuLinks = document.getElementsByClassName("header__menu__link")
 for (let i = 0; i < menuLinks.length; i++) {
     let menuLink = (menuLinks[i].href).replace("#", "")
     let url = (window.location.href).replace("#", "")
-    if (menuLink == url) {
+    let host = window.location.host
+    if (url != host && menuLink == url) {
         menuLinks[i].classList.add("active");
+    }
+    else {
+        menuLinks[0].classList.add("active");
     }
 };
 
