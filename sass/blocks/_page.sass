@@ -1,0 +1,56 @@
+.page-banner
+    position: relative
+    height: 240px
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    margin-bottom: 50px
+    &__background
+        position: absolute
+        z-index: -1
+        left: 0
+        top: 50%
+        bottom: 0
+        right: 0
+        transform: translateY(-50%)
+        text-align: center
+        font-size: 6rem
+        line-height: 1
+        margin: 0
+        color: #0000fe
+        opacity: 0.2
+        letter-spacing: 1rem
+        text-transform: uppercase
+    &__title
+        font-size: 3rem
+        line-height: 1.2
+        margin: 0
+        +bold
+
+.page-content
+    padding: 20px
+    background-color: #ffffff
+    box-shadow: 0px 0px 16px 0px rgba(34, 60, 80, 0.1)
+    border-radius: 10px
+
+.page-block
+    margin-bottom: 50px
+    &:last-child
+        margin-bottom: 0
+    &__title
+        text-align: center
+        margin-bottom: 20px
+    &__text
+        line-height: 1.5
+        p
+            margin: 5px 0 0 0
+            &:first-child
+                margin-top: 0
+        img
+            display: block
+            margin: 0 auto
+            margin-top: 5px
+            width: 75%
+        ul
+            margin: 0
+            padding-inline-start: 16px

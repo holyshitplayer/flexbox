@@ -48,19 +48,19 @@ let elements = ["img/elements/elem1.svg", "img/elements/elem2.svg", "img/element
 let pageWidth = document.body.clientWidth;
 let pageHeight = document.body.clientHeight;
 
-let multiplierY = 400;
-let multiplierX = 400;
+let multiplierY = 300;
+let multiplierX = 300;
 
 function random(min, max) {
     return min + Math.random() * (max - min);
 }
 
 for (let row = 0; row < Math.round(pageHeight / multiplierY); row++) {
-    for (let column = 0; column < Math.round(pageWidth / multiplierX); column++) {
+    for (let column = 1; column < Math.round(pageWidth / multiplierX); column++) {
         let topMin = row * multiplierY;
-        let topMax = row + 1 <= Math.round(pageHeight / multiplierY) ? (row + 1) * multiplierY : row;
+        let topMax = row + 1 < Math.round(pageHeight / multiplierY) ? (row + 1) * multiplierY : row;
         let leftMin = column * multiplierX;
-        let leftMax = column + 1 <= Math.round(pageWidth / multiplierX) ? (column + 1) * multiplierX : column;
+        let leftMax = column + 1 < Math.round(pageWidth / multiplierX) ? (column + 1) * multiplierX : column;
 
         let top = random(topMin, topMax);
         let left = random(leftMin, leftMax);
