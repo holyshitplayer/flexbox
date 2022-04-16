@@ -29,50 +29,74 @@
         column-gap: 30px
         margin-top: 20px
         &__block
-            display: flex
-            align-items: center
-            justify-content: center
-            flex-direction: column
             width: calc( 50% - 15px )
+    &__property
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
         &__title
-            margin: 0
+            margin: 0 0 5px 0
             padding: 0
             font-size: 1.125rem
             +bold
+        a.link
+            margin-top: 5px
     &__scheme
-        width: 100%
         display: flex
         justify-content: space-between
         align-items: center
-        column-gap: 10px
-        padding: 10px
-        border-radius: 5px
-        &.container
-            background: linear-gradient(135deg, rgb(19, 12, 183) 0%, rgba(151,8,204,1) 100%)
-            box-shadow: 0px 0px 8px 8px rgba(19, 12, 183, 0.2)
-            div
-                background-color: #ffffff
-                opacity: 0.5
-        &.items
-            background-color: rgba(0, 0, 254, 0.05)
-            div
-                background: linear-gradient(135deg, rgb(19, 12, 183) 0%, rgba(151,8,204,1) 100%)
-                box-shadow: 0px 0px 8px 8px rgba(151,8,204, 0.2)
+        flex-wrap: wrap
+        gap: 10px
+        padding: 20px
+        padding-top: 30px
+        background: linear-gradient(135deg, #56ccf2 0%, #2f80ed 100%)
+        border-radius: 10px
+        transform: skew(0, 3deg)
+        box-shadow: 0px 0px 16px 16px rgba(47, 128, 237, 0.2)
         div
-            width: calc( 25% - 7.5px )
-            height: 64px
-            border-radius: 5px
+            background-color: #ffffff
+            opacity: 0.5
+            border-radius: 10px
+            height: 80px
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: default
             transition: transform .15s ease
-            &:hover
-                transform: translateY(-1.5px)
-        &__title
-            margin: 5px 0
-            padding: 0
             +bold
-            &.container
-                color: #130CB7
-            &.items
-                color: #9708CC
+            &:hover
+                transform: scale(1.02)
+            &:nth-of-type(1)
+                width: calc( 25% - 7.5px )
+            &:nth-of-type(2)
+                width: calc( 25% - 7.5px )
+            &:nth-of-type(3)
+                width: calc( 25% - 7.5px )
+            &:nth-of-type(4)
+                width: calc( 25% - 7.5px )
+            &:nth-of-type(5)
+                width: calc( 50% - 5px )
+            &:nth-of-type(6)
+                width: calc( 50% - 5px )
+            &:nth-of-type(7)
+                width: calc( 100% / 3 - 20px / 3 )
+            &:nth-of-type(8)
+                width: calc( 100% / 3 - 20px / 3 )
+            &:nth-of-type(9)
+                width: calc( 100% / 3 - 20px / 3 )
+        span
+            position: absolute
+            right: 0
+            left: 0
+            top: 4px
+            text-align: center
+            cursor: default
+            opacity: 0.5
+            +bold
     &__examples
         width: 100%
         display: flex
