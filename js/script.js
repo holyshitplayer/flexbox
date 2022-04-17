@@ -5,7 +5,7 @@ for (let i = 0; i < menuLinks.length; i++) {
     let pathname = window.location.pathname
     if (menuLink == url) {
         menuLinks[i].classList.add("active");
-    } else if (pathname == "/") {
+    } else if (pathname == "/" || pathname == "/web-t/") {
         menuLinks[0].classList.add("active");
     }
 };
