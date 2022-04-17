@@ -112,6 +112,39 @@
             text-align: justify
             img
                 width: 100%
+        &__schemes
+            margin: 10px 0
+            gap: 10px
+            &__row, &__column, &__justify-content, &__align-items, &__align-content, &__gap
+                gap: 10px
+        &__scheme
+            max-width: 210px!important
+            div
+                width: 40px
+                height: 40px
+            span
+                font-size: 0.875rem
+            &.flex-wrap, &.flex-wrap-reverse
+                max-width: 210px
+                img.arrow
+                    width: 80%
+            &.align-items-flex-start, &.align-items-flex-end, &.align-items-center, &.align-items-center, &.align-items-stretch, &.align-items-baseline
+                height: 150px
+                div
+                    &:nth-of-type(1)
+                        height: 40px
+                    &:nth-of-type(2)
+                        height: 56px
+                    &:nth-of-type(3)
+                        height: 24px
+                    &:nth-of-type(4)
+                        height: 64px
+            &.align-items-stretch
+                div
+                    &:nth-of-type(n)
+                        height: auto
+            &.align-content-flex-start, &.align-content-flex-end, &.align-content-center, &.align-content-stretch, &.align-content-space-between, &.align-content-space-around, &.align-content-space-evenly
+                height: 180px
 
 @media (max-width: 576px)
     .header
@@ -157,6 +190,13 @@
             letter-spacing: 0
         &__title
             font-size: 1.5em
+    .page-block
+        &__schemes
+            flex-wrap: wrap
+            &__row, &__column
+                width: 100%
+        &__scheme
+            max-width: 210px!important
 
 @media (max-width: 375px)
     .pages

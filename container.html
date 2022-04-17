@@ -30,6 +30,461 @@
         </div>
     </header>
 
+    <main>
+        <div class="page-container">
+            <section class="page-banner">
+                <p class="page-banner__background">Properties</p>
+                <h1 class="page-banner__title">Свойства для контейнера</h1>
+            </section>
+            <section class="page-content">
+                <div class="page-block">
+                    <h3 class="page-block__title title">display</h3>
+                    <div class="page-block__text">
+                        <p>Это определяет гибкий контейнер; inline или block в зависимости от заданного значения. Он включает гибкий контекст для всех своих прямых дочерних элементов.</p>
+                        <div class="css wrap">
+                            <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">display:</span> <span class="css value">flex</span><span class="css punctuation">;</span> <span class="css comment">/* or inline-flex */</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <p>Обратите внимание, что столбцы CSS не влияют на контейнер flex.</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">flex-direction</h3>
+                    <div class="page-block__text">
+                        <p>Это устанавливает главную ось, тем самым определяя направление размещения гибких элементов в контейнере flex. Flexbox — это (помимо опциональной обертки) концепция макета с одним направлением. Думайте о гибких элементах как о расположении в первую очередь либо в горизонтальных рядах, либо в вертикальных столбцах.</p>
+                        <div class="page-block__schemes">
+                            <div class="page-block__schemes__row">
+                                <div class="page-block__scheme flex-direction-row">
+                                    <span>flex-direction: row</span>
+                                    <img src="img/container/flex-direction-row.svg" alt="Flex direction row" class="arrow">
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme flex-direction-row-reverse">
+                                    <span>flex-direction: row-reverse</span>
+                                    <img src="img/container/flex-direction-row-reverse.svg" alt="Flex direction row reverse" class="arrow">
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="page-block__schemes__column">
+                                <div class="page-block__scheme flex-direction-column">
+                                    <span>flex-direction: column</span>
+                                    <img src="img/container/flex-direction-column.svg" alt="Flex direction column" class="arrow">
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme flex-direction-column-reverse">
+                                    <span>flex-direction: column-reverse</span>
+                                    <img src="img/container/flex-direction-column-reverse.svg" alt="Flex direction column reverse" class="arrow">
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="css wrap">
+                            <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">flex-direction:</span> <span class="css value">row | row-reverse | column | column-reverse</span><span class="css punctuation">;</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <ul>
+                            <li><p><code>row</code> (по умолчанию): слева направо в rtl; справа налево в rtl</p></li>
+                            <li><p><code>row-reverse</code>: справа налево rtl; слева направо в rtl</p></li>
+                            <li><p><code>column</code>: то же, что ряд, но сверху вниз</p></li>
+                            <li><p><code>column-reverse</code>: то же, что и обратный ряд, но снизу вверх</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">flex-wrap</h3>
+                    <div class="page-block__text">
+                        <p>По умолчанию все flex-элементы будут пытаться разместиться на одной строке. Вы можете изменить это и разрешить элементам переноситься по мере необходимости с помощью этого свойства.</p>
+                        <div class="page-block__schemes">
+                            <div class="page-block__scheme flex-wrap">
+                                <span>flex-wrap: wrap</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                                <img src="img/container/flex-wrap.svg" alt="Flex wrap" class="arrow">
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme flex-wrap-reverse">
+                                <span>flex-wrap: wrap-reverse</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                                <img src="img/container/flex-wrap-reverse.svg" alt="Flex wrap reverse" class="arrow">
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="css wrap">
+                            <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">flex-wrap:</span> <span class="css value">nowrap | wrap | wrap-reverse</span><span class="css punctuation">;</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <ul>
+                            <li><p><code>nowrap</code> (по умолчанию): все гибкие элементы будут в одной строке.</p></li>
+                            <li><p><code>wrap</code>: flex-элементы будут переноситься на несколько строк сверху вниз.</p></li>
+                            <li><p><code>wrap-reverse</code>: flex-элементы будут переноситься на несколько строк снизу вверх.</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">flex-flow</h3>
+                    <div class="page-block__text">
+                        <p>Это сокращение для свойств flex-direction и flex-wrap, которые вместе определяют главную и поперечную оси flex-контейнера. Значение по умолчанию — row nowrap.</p>
+                        <div class="css wrap">
+                            <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">flex-flow:</span> <span class="css value">column wrap</span><span class="css punctuation">;</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">justify-content</h3>
+                    <div class="page-block__text">
+                        <p>Это определяет выравнивание вдоль главной оси. Это помогает распределять дополнительное свободное пространство, когда либо все гибкие элементы в строке негибкие, либо гибкие, но достигли своего максимального размера. Он также осуществляет некоторый контроль над выравниванием элементов, когда они выходят за пределы строки.</p>
+                        <div class="page-block__schemes">
+                            <div class="page-block__schemes__justify-content">
+                                <div class="page-block__scheme justify-content-flex-start">
+                                    <span>justify-content: flex-start</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme justify-content-flex-end">
+                                    <span>justify-content: flex-end</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme justify-content-center">
+                                    <span>justify-content: center</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme justify-content-space-between">
+                                    <span>justify-content: space-between</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme justify-content-space-around">
+                                    <span>justify-content: space-around</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme justify-content-space-evenly">
+                                    <span>justify-content: space-evenly</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="css wrap">
+                            <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">justify-content:</span> <span class="css value">flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe</span><span class="css punctuation">;</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <ul>
+                            <li><p><code>flex-start</code> (по умолчанию): элементы упакованы в направлении начала flex-направления.</p></li>
+                            <li><p><code>flex-end</code>: элементы упаковываются ближе к концу flex-направления.</p></li>
+                            <li><p><code>start</code>: элементы упаковываются к началу направления режима записи.</p></li>
+                            <li><p><code>end</code>: элементы упаковываются ближе к концу направления режима записи.</p></li>
+                            <li><p><code>left</code>: элементы упаковываются по направлению к левому краю контейнера, если только это не имеет смысла с flex-direction, тогда это ведет себя как start.</p></li>
+                            <li><p><code>right</code>: элементы упаковываются по направлению к правому краю контейнера, если только это не имеет смысла с flex-direction, тогда это ведет себя как конец.</p></li>
+                            <li><p><code>center</code>: элементы располагаются по центру строки.</p></li>
+                            <li><p><code>space-between</code>: предметы равномерно распределены в ряду; первый элемент находится в начальной строке, последний элемент в конечной строке.</p></li>
+                            <li><p><code>space-around</code>: элементы равномерно распределены в строке с равным пространством вокруг них. Обратите внимание, что визуально пространства не равны, так как все предметы имеют одинаковое пространство с обеих сторон. Первый элемент будет иметь одну единицу пространства от края контейнера, но две единицы пространства между следующим элементом, потому что этот следующий элемент имеет свой собственный интервал, который применяется.</p></li>
+                            <li><p><code>space-evenly</code>: элементы распределяются так, чтобы расстояние между любыми двумя элементами (и расстояние до краев) было одинаковым.</p></li>
+                        </ul>
+                        <p>Обратите внимание, что поддержка браузером этих значений имеет нюансы. Например, space-between никогда не поддерживался в некоторых версиях Edge, а start/end/left/right еще нет в Chrome. У MDN есть подробные диаграммы. Наиболее безопасными значениями являются flex-start, flex-end и center.</p>
+                        <p>Есть также два дополнительных ключевых слова, которые вы можете сочетать с этими значениями: safe и unsafe. Использование safe гарантирует, что, как бы вы ни использовали этот тип позиционирования, вы не можете нажать элемент так, чтобы он отображался за пределами экрана (например, сверху) таким образом, что содержимое также не может быть прокручено (так называемая «потеря данных»).</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">align-items</h3>
+                    <div class="page-block__text">
+                        <p>Это определяет поведение по умолчанию для того, как flex-элементы располагаются вдоль поперечной оси на текущей строке. Думайте об этом как о версии с выравниванием содержимого для поперечной оси (перпендикулярной главной оси).</p>
+                        <div class="page-block__schemes">
+                            <div class="page-block__schemes__align-items">
+                                <div class="page-block__scheme align-items-flex-start">
+                                    <span>align-items: flex-start</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme align-items-flex-end">
+                                    <span>align-items: flex-end</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme align-items-center">
+                                    <span>align-items: center</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme align-items-stretch">
+                                    <span>align-items: stretch</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme align-items-baseline">
+                                    <span>align-items: baseline</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="css wrap">
+                            <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">align-items:</span> <span class="css value">stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe</span><span class="css punctuation">;</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <ul>
+                            <li><p><code>stretch</code> (по умолчанию): растянуть, чтобы заполнить контейнер (по-прежнему соблюдать минимальную ширину/максимальную ширину).</p></li>
+                            <li><p><code>flex-start / start / self-start</code>: элементы размещаются в начале поперечной оси. Разница между ними тонкая и заключается в соблюдении правил направления гибкости или правил режима записи.</p></li>
+                            <li><p><code>flex-end / end / self-end</code>: элементы размещаются в конце поперечной оси. Разница снова неуловима и заключается в соблюдении правил гибкого направления по сравнению с правилами режима письма.</p></li>
+                            <li><p><code>center</code>: элементы центрированы по поперечной оси.</p></li>
+                            <li><p><code>baseline</code>: элементы выровнены, например, их базовые линии выровнены.</p></li>
+                        </ul>
+                        <p>Ключевые слова-модификаторы safe и unsafe можно использовать в сочетании со всеми остальными ключевыми словами (хотя обратите внимание на поддержку браузера) и помочь вам предотвратить выравнивание элементов таким образом, что содержимое становится недоступным.</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">align-content</h3>
+                    <div class="page-block__text">
+                        <p>Это выравнивает строки гибкого контейнера внутри, когда на поперечной оси есть дополнительное пространство, аналогично тому, как justify-content выравнивает отдельные элементы внутри основной оси.</p>
+                        <p><b>Примечание:</b> Это свойство действует только для многострочных гибких контейнеров, где для flex-wrap установлено значение wrap или wrap-reverse). Однострочный гибкий контейнер (т.е. где для flex-wrap установлено значение по умолчанию, без переноса) не будет отражать align-content.</p>
+                        <div class="page-block__schemes">
+                            <div class="page-block__schemes__align-content">
+                                <div class="page-block__scheme align-content-flex-start">
+                                    <span>align-content: flex-start</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme align-content-flex-end">
+                                    <span>align-content: flex-end</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme align-content-center">
+                                    <span>align-content: center</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme align-content-space-between">
+                                    <span>align-content: space-between</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme align-content-space-around">
+                                    <span>align-content: space-around</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme align-content-space-evenly">
+                                    <span>align-content: space-evenly</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="css wrap">
+                            <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">align-content:</span> <span class="css value">flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe</span><span class="css punctuation">;</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <ul>
+                            <li><p><code>normal</code> (по умолчанию): элементы упаковываются в положение по умолчанию, как если бы значение не было установлено.</p></li>
+                            <li><p><code>flex-start / start</code>: предметы, упакованные до начала контейнера. (Более поддерживаемый) flex-start учитывает направление flex-direction, а start учитывает направление режима письма.</p></li>
+                            <li><p><code>flex-end / end</code>: предметы упакованы до конца контейнера. (Больше поддержки) flex-end учитывает направление flex-direction, в то время как end учитывает направление режима письма.</p></li>
+                            <li><p><code>center</code>: элементы по центру контейнера.</p></li>
+                            <li><p><code>space-between</code>: элементы равномерно распределены; первая строка находится в начале контейнера, а последняя в конце.</p></li>
+                            <li><p><code>space-around</code>: элементы равномерно распределены с одинаковым пространством вокруг каждой строки.</p></li>
+                            <li><p><code>space-evenly</code>: предметы равномерно распределены с равным пространством вокруг них.</p></li>
+                            <li><p><code>stretch</code>: линии растягиваются, чтобы занять оставшееся пространство.</p></li>
+                        </ul>
+                        <p>Ключевые слова-модификаторы safe и unsafe можно использовать в сочетании со всеми остальными ключевыми словами (хотя обратите внимание на поддержку браузера) и помочь вам предотвратить выравнивание элементов таким образом, что содержимое становится недоступным.</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">gap, row-gap, column-gap</h3>
+                    <div class="page-block__text">
+                        <p>Свойство gap явно управляет пространством между flex-элементами. Это расстояние применяется только между элементами, а не на внешних краях.</p>
+                        <div class="page-block__schemes">
+                            <div class="page-block__schemes__gap">
+                                <div class="page-block__scheme gap10">
+                                    <span>gap: 10px</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme gap30">
+                                    <span>gap: 30px</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme gap1030">
+                                    <span>gap: 10px 30px</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme column-gap">
+                                    <span>column-gap: 20px</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="page-block__scheme row-gap">
+                                    <span>row-gap: 20px</span>
+        
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="css wrap">
+                            <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">display:</span> <span class="css value">flex</span><span class="css punctuation">;</span></code>
+                            <code><span class="css property">gap:</span> <span class="css value">10px</span><span class="css punctuation">;</span></code>
+                            <code><span class="css property">gap:</span> <span class="css value">10px 20px</span><span class="css punctuation">;</span> <span class="css comment">/* row-gap column gap */</span></code>
+                            <code><span class="css property">row-gap:</span> <span class="css value">10px</span><span class="css punctuation">;</span></code>
+                            <code><span class="css property">column-gap:</span> <span class="css value">20px</span><span class="css punctuation">;</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <p>Поведение можно рассматривать как минимальный отступ, как если бы отступ каким-то образом стал больше (из-за чего-то вроде justify-content: space-between;), тогда зазор вступит в силу только в том случае, если это пространство в конечном итоге станет меньше.</p>
+                        <p>Это не только для flexbox, разрыв работает и в сетке, и в многоколоночной компоновке.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__info">
