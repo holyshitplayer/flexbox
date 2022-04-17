@@ -83,3 +83,22 @@ for (let row = 0; row < Math.round(pageHeight / multiplierY); row++) {
         elementsDiv.appendChild(newElement);
     }
 }
+
+// ТАБЫ ПРИМЕРОВ НА ГЛАВНОЙ СТРАНИЦЕ
+if (document.querySelector("[data-tab]")) {
+    let tabContents = document.querySelectorAll(".pages__example");
+    let tabLinks = document.querySelectorAll(".pages__examples__links a[data-tab]");
+    
+    tabLinks.forEach(tabLink => {
+        tabLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            let tabIndex = this.getAttribute("data-tab");
+            let tabActive = document.querySelector(".pages__example.active");
+            let tabContent = document.querySelector('a.pages__example[data-tab="' + tabIndex + '"]');
+            if (tabIndex != tabActive.getAttribute("data-tab")) {
+                tabActive.classList.remove("active");
+                tabContent.classList.add("active");
+            }
+        });
+    });
+}

@@ -57,6 +57,9 @@
         border-radius: 10px
         transform: skew(0, 3deg)
         box-shadow: 0px 0px 16px 16px rgba(47, 128, 237, 0.2)
+        transition: transform .15s ease
+        &:hover
+            transform: skew(0, 3deg) scale(1.01)
         div
             background-color: #ffffff
             opacity: 0.5
@@ -98,33 +101,55 @@
             opacity: 0.5
             +bold
     &__examples
-        width: 100%
+        width: 750px
         display: flex
+        flex-direction: column
         justify-content: space-between
         align-items: center
-        column-gap: 30px
         margin-top: 20px
-    &__example
-        text-align: center
-        width: calc( 25% - 24.5px )
-        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.1)
-        border-radius: 5px
-        &__image
-            img
-                border-top-left-radius: 5px
-                border-top-right-radius: 5px
-                width: 100%
-                display: block
-        &__content
-            padding: 20px
-            background-color: #ffffff
-        &__title
-            font-size: 1.125rem
-            margin: 0 0 20px 0
-            display: block
-            transition: color .15s ease
-            +bold
-            &:hover
-                color: #0000fe
-        &__description
+        position: relative
+        background: linear-gradient(135deg, #EE9AE5 0%, #5961F9 100%)
+        box-shadow: 0px 0px 16px 0px rgba(34, 60, 80, 0.1)
+        border-radius: 10px
+        &__links
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+            width: 100%
             margin: 0
+            padding: 0
+            display: flex
+            justify-content: center
+            gap: 10px
+            transform: translateY(50%)
+    &__example
+        height: 400px
+        width: 400px
+        justify-content: center
+        align-items: center
+        display: none
+        &.active
+            display: flex
+        &:nth-child(1)
+            background-color: #ffffff
+            opacity: 0.3
+        &:nth-child(2)
+            background-color: #ffffff
+            opacity: 0.4
+        &:nth-child(3)
+            background-color: #ffffff
+            opacity: 0.5
+    //     &__content
+    //         padding: 20px
+    //         background-color: #ffffff
+    //     &__title
+    //         font-size: 1.125rem
+    //         margin: 0 0 20px 0
+    //         display: block
+    //         transition: color .15s ease
+    //         +bold
+    //         &:hover
+    //             color: #0000fe
+    //     &__description
+    //         margin: 0
