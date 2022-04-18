@@ -27,14 +27,14 @@ document.addEventListener(
         });
         const drawer = menu.offcanvas();
 
-        document.querySelector('.header__menu__open-menu')
-            .addEventListener('click', (evnt) => {
+        document.querySelector(".header__menu__open-menu")
+            .addEventListener("click", (evnt) => {
                 evnt.preventDefault();
                 drawer.open();
             });
 
-        document.querySelector('.header__menu__close-menu')
-            .addEventListener('click', (evnt) => {
+        document.querySelector(".header__menu__close-menu")
+            .addEventListener("click", (evnt) => {
                 evnt.preventDefault();
                 drawer.close();
             });
@@ -45,7 +45,7 @@ document.addEventListener(
 
 let elementsDiv = document.createElement("div");
 elementsDiv.classList.add("elements");
-document.body.insertBefore(elementsDiv, document.querySelector('.header'))
+document.body.insertBefore(elementsDiv, document.querySelector(".header"))
 
 let elements = ["img/elements/elem1.svg", "img/elements/elem2.svg", "img/elements/elem3.svg", "img/elements/elem4.svg"];
 
@@ -73,11 +73,10 @@ for (let row = 0; row < Math.round(pageHeight / multiplierY); row++) {
         let idx = Math.round(random(0, elements.length));
         idx = idx < elements.length ? idx : idx - 1;
         let element = elements[idx];
-        let elementsDiv = document.querySelector('.elements');
+        let elementsDiv = document.querySelector(".elements");
 
         let newElement = document.createElement("img");
         newElement.classList.add("elements__element");
-        newElement.classList.add("rellax");
         newElement.style.cssText += "top: " + top + "px;";
         newElement.style.cssText += "left: " + left + "px;";
         newElement.style.cssText += "transform: rotate(" + rotateAngle + "deg);";
@@ -88,19 +87,21 @@ for (let row = 0; row < Math.round(pageHeight / multiplierY); row++) {
     }
 }
 
-// ТАБЫ ПРИМЕРОВ НА ГЛАВНОЙ СТРАНИЦЕ
+// ТАБЫ
 if (document.querySelector("[data-tab]")) {
-    let tabContents = document.querySelectorAll(".pages__example");
-    let tabLinks = document.querySelectorAll(".pages__examples__links a[data-tab]");
-    
+    let tabLinks = document.querySelectorAll(".tab-link");
+
     tabLinks.forEach(tabLink => {
-        tabLink.addEventListener("click", function(e) {
+        tabLink.addEventListener("click", function (e) {
             e.preventDefault();
+            let linkActive = document.querySelector(".tab-link.active");
+            let tabActive = document.querySelector(".tab-content.active");
             let tabIndex = this.getAttribute("data-tab");
-            let tabActive = document.querySelector(".pages__example.active");
-            let tabContent = document.querySelector('a.pages__example[data-tab="' + tabIndex + '"]');
+            let tabContent = document.querySelector('.tab-content[data-tab="' + tabIndex + '"]');
             if (tabIndex != tabActive.getAttribute("data-tab")) {
+                linkActive.classList.remove("active");
                 tabActive.classList.remove("active");
+                tabLink.classList.add("active");
                 tabContent.classList.add("active");
             }
         });
