@@ -57,6 +57,7 @@
         border-radius: 10px
         transform: skew(0, 3deg)
         box-shadow: 0px 0px 16px 16px rgba(47, 128, 237, 0.2)
+        will-change: transform
         transition: transform .15s ease
         &:hover
             transform: skew(0, 3deg) scale(1.01)
@@ -69,6 +70,7 @@
             align-items: center
             justify-content: center
             cursor: default
+            will-change: transform
             transition: transform .15s ease
             +bold
             &:hover
