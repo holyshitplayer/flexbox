@@ -1,3 +1,5 @@
+// ПОДСВЕТКА АКТИВНОЙ ССЫЛКИ
+
 let menuLinks = document.getElementsByClassName("header__menu__link")
 for (let i = 0; i < menuLinks.length; i++) {
     let menuLink = (menuLinks[i].href).replace("#", "")
@@ -9,6 +11,8 @@ for (let i = 0; i < menuLinks.length; i++) {
         menuLinks[0].classList.add("active");
     }
 };
+
+// МОБИЛЬНОЕ МЕНЮ
 
 document.addEventListener(
     "DOMContentLoaded", () => {

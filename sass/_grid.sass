@@ -149,11 +149,13 @@
                         height: auto
             &.align-content-flex-start, &.align-content-flex-end, &.align-content-center, &.align-content-stretch, &.align-content-space-between, &.align-content-space-around, &.align-content-space-evenly
                 height: 180px
-            &.order
-                max-width: 280px!important
             &.align-self
                 height: 150px
                 max-width: 100%!important
+            &.order
+                div
+                    &:nth-child(2)
+                        display: none
                     
 
 @media (max-width: 576px)
@@ -206,12 +208,6 @@
             &__row, &__column
                 width: 100%
         &__scheme
-            &.order
-                max-width: 210px!important
-                &:nth-child(1), &:nth-child(2)
-                    div
-                        &:nth-child(2)
-                            display: none
             &.align-self
                 div
                     &:nth-of-type(1), &:nth-of-type(2)
