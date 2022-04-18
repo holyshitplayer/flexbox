@@ -7,7 +7,7 @@
     <meta name="description" content="Новый стандарт вёрстки Flexbox. Детальное руководство">
     <title>Контейнер</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="libs/mmenu-light.css">
+    <link rel="stylesheet" href="libs/mmenu-light/mmenu-light.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -54,8 +54,8 @@
                     <div class="page-block__text">
                         <p>Это устанавливает главную ось, тем самым определяя направление размещения гибких элементов в контейнере flex. Flexbox — это (помимо опциональной обертки) концепция макета с одним направлением. Думайте о гибких элементах как о расположении в первую очередь либо в горизонтальных рядах, либо в вертикальных столбцах.</p>
                         <div class="page-block__schemes">
-                            <div class="page-block__schemes__row">
-                                <div class="page-block__scheme flex-direction-row">
+                            <div class="page-block__schemes__fdr">
+                                <div class="page-block__scheme fdr">
                                     <span>flex-direction: row</span>
                                     <img src="img/container/flex-direction-row.svg" alt="Flex direction row" class="arrow">
         
@@ -64,7 +64,7 @@
                                     <div></div>
                                     <div></div>
                                 </div>
-                                <div class="page-block__scheme flex-direction-row-reverse">
+                                <div class="page-block__scheme fdrr">
                                     <span>flex-direction: row-reverse</span>
                                     <img src="img/container/flex-direction-row-reverse.svg" alt="Flex direction row reverse" class="arrow">
         
@@ -74,8 +74,8 @@
                                     <div></div>
                                 </div>
                             </div>
-                            <div class="page-block__schemes__column">
-                                <div class="page-block__scheme flex-direction-column">
+                            <div class="page-block__schemes__fdc">
+                                <div class="page-block__scheme fdc">
                                     <span>flex-direction: column</span>
                                     <img src="img/container/flex-direction-column.svg" alt="Flex direction column" class="arrow">
         
@@ -84,7 +84,7 @@
                                     <div></div>
                                     <div></div>
                                 </div>
-                                <div class="page-block__scheme flex-direction-column-reverse">
+                                <div class="page-block__scheme fdcr">
                                     <span>flex-direction: column-reverse</span>
                                     <img src="img/container/flex-direction-column-reverse.svg" alt="Flex direction column reverse" class="arrow">
         
@@ -113,7 +113,7 @@
                     <div class="page-block__text">
                         <p>По умолчанию все flex-элементы будут пытаться разместиться на одной строке. Вы можете изменить это и разрешить элементам переноситься по мере необходимости с помощью этого свойства.</p>
                         <div class="page-block__schemes">
-                            <div class="page-block__scheme flex-wrap">
+                            <div class="page-block__scheme fw">
                                 <span>flex-wrap: wrap</span>
     
                                 <div></div>
@@ -128,7 +128,7 @@
                                 <div></div>
                                 <div></div>
                             </div>
-                            <div class="page-block__scheme flex-wrap-reverse">
+                            <div class="page-block__scheme fwr">
                                 <span>flex-wrap: wrap-reverse</span>
     
                                 <div></div>
@@ -172,49 +172,47 @@
                     <div class="page-block__text">
                         <p>Это определяет выравнивание вдоль главной оси. Это помогает распределять дополнительное свободное пространство, когда либо все гибкие элементы в строке негибкие, либо гибкие, но достигли своего максимального размера. Он также осуществляет некоторый контроль над выравниванием элементов, когда они выходят за пределы строки.</p>
                         <div class="page-block__schemes">
-                            <div class="page-block__schemes__justify-content">
-                                <div class="page-block__scheme justify-content-flex-start">
-                                    <span>justify-content: flex-start</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme justify-content-flex-end">
-                                    <span>justify-content: flex-end</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme justify-content-center">
-                                    <span>justify-content: center</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme justify-content-space-between">
-                                    <span>justify-content: space-between</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme justify-content-space-around">
-                                    <span>justify-content: space-around</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme justify-content-space-evenly">
-                                    <span>justify-content: space-evenly</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
+                            <div class="page-block__scheme jcfs">
+                                <span>justify-content: flex-start</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme jcfe">
+                                <span>justify-content: flex-end</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme jcc">
+                                <span>justify-content: center</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme jcsb">
+                                <span>justify-content: space-between</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme jcsa">
+                                <span>justify-content: space-around</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme jcse">
+                                <span>justify-content: space-evenly</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <div class="css wrap">
@@ -243,47 +241,45 @@
                     <div class="page-block__text">
                         <p>Это определяет поведение по умолчанию для того, как flex-элементы располагаются вдоль поперечной оси на текущей строке. Думайте об этом как о версии с выравниванием содержимого для поперечной оси (перпендикулярной главной оси).</p>
                         <div class="page-block__schemes">
-                            <div class="page-block__schemes__align-items">
-                                <div class="page-block__scheme align-items-flex-start">
-                                    <span>align-items: flex-start</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme align-items-flex-end">
-                                    <span>align-items: flex-end</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme align-items-center">
-                                    <span>align-items: center</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme align-items-stretch">
-                                    <span>align-items: stretch</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme align-items-baseline">
-                                    <span>align-items: baseline</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
+                            <div class="page-block__scheme aifs">
+                                <span>align-items: flex-start</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme aife">
+                                <span>align-items: flex-end</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme aic">
+                                <span>align-items: center</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme ais">
+                                <span>align-items: stretch</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme aib">
+                                <span>align-items: baseline</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <div class="css wrap">
@@ -307,79 +303,77 @@
                         <p>Это выравнивает строки гибкого контейнера внутри, когда на поперечной оси есть дополнительное пространство, аналогично тому, как justify-content выравнивает отдельные элементы внутри основной оси.</p>
                         <p><b>Примечание:</b> Это свойство действует только для многострочных гибких контейнеров, где для flex-wrap установлено значение wrap или wrap-reverse). Однострочный гибкий контейнер (т.е. где для flex-wrap установлено значение по умолчанию, без переноса) не будет отражать align-content.</p>
                         <div class="page-block__schemes">
-                            <div class="page-block__schemes__align-content">
-                                <div class="page-block__scheme align-content-flex-start">
-                                    <span>align-content: flex-start</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                            <div class="page-block__scheme acfs">
+                                <span>align-content: flex-start</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme align-content-flex-end">
-                                    <span>align-content: flex-end</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme acfe">
+                                <span>align-content: flex-end</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme align-content-center">
-                                    <span>align-content: center</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme acc">
+                                <span>align-content: center</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme align-content-space-between">
-                                    <span>align-content: space-between</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme acsb">
+                                <span>align-content: space-between</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme align-content-space-around">
-                                    <span>align-content: space-around</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme acsa">
+                                <span>align-content: space-around</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme align-content-space-evenly">
-                                    <span>align-content: space-evenly</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme acse">
+                                <span>align-content: space-evenly</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <div class="css wrap">
@@ -405,67 +399,65 @@
                     <div class="page-block__text">
                         <p>Свойство gap явно управляет пространством между flex-элементами. Это расстояние применяется только между элементами, а не на внешних краях.</p>
                         <div class="page-block__schemes">
-                            <div class="page-block__schemes__gap">
-                                <div class="page-block__scheme gap10">
-                                    <span>gap: 10px</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                            <div class="page-block__scheme gap10">
+                                <span>gap: 10px</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme gap30">
-                                    <span>gap: 30px</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme gap30">
+                                <span>gap: 30px</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme gap1030">
-                                    <span>gap: 10px 30px</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme gap1030">
+                                <span>gap: 10px 30px</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme column-gap">
-                                    <span>column-gap: 20px</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme column-gap">
+                                <span>column-gap: 20px</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                                <div class="page-block__scheme row-gap">
-                                    <span>row-gap: 20px</span>
-        
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="page-block__scheme row-gap">
+                                <span>row-gap: 20px</span>
+    
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
 
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <div class="css wrap">
@@ -496,6 +488,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="libs/mmenu-light.js"></script>
+    <script src="libs/mmenu-light/mmenu-light.js"></script>
 </body>
 </html>

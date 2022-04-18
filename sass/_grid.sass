@@ -8,11 +8,6 @@
                 width: 100%
                 div
                     height: 150px
-    .page-block
-        &__scheme
-            &.order
-                &:nth-child(3)
-                    width: 340px
 
 @media (max-width: 992px)
     .elements
@@ -119,20 +114,18 @@
                 width: 100%
         &__schemes
             gap: 10px
-            &__row, &__column, &__justify-content, &__align-items, &__align-content, &__gap, &__order
-                gap: 10px
-                margin: 10px 0
+            margin: 10px 0
         &__scheme
-            max-width: 210px!important
+            width: 210px
             div
                 width: 40px
                 height: 40px
             span
                 font-size: 0.875rem
-            &.flex-wrap, &.flex-wrap-reverse
+            &.fw, &.fwr
                 img.arrow
                     width: 80%
-            &.align-items-flex-start, &.align-items-flex-end, &.align-items-center, &.align-items-center, &.align-items-stretch, &.align-items-baseline
+            &.aifs, &.aife, &.aic, &.ais, &.aib
                 height: 150px
                 div
                     &:nth-of-type(1)
@@ -143,15 +136,15 @@
                         height: 24px
                     &:nth-of-type(4)
                         height: 64px
-            &.align-items-stretch
+            &.ais
                 div
                     &:nth-of-type(n)
                         height: auto
-            &.align-content-flex-start, &.align-content-flex-end, &.align-content-center, &.align-content-stretch, &.align-content-space-between, &.align-content-space-around, &.align-content-space-evenly
+            &.acfs, &.acfe, &.acc, &.acs, &.acsb, &.acsa, &.acse
                 height: 180px
-            &.align-self
+            &.as
                 height: 150px
-                max-width: 100%!important
+                max-width: 100%
             &.order
                 div
                     &:nth-child(2)
@@ -204,11 +197,16 @@
             font-size: 1.5em
     .page-block
         &__schemes
-            flex-wrap: wrap
-            &__row, &__column
+            margin: 10px 0
+            &__fdc
                 width: 100%
+                gap: 10px
+                justify-content: center
+            &__fdr
+                width: 100%
+                gap: 10px
         &__scheme
-            &.align-self
+            &.as
                 div
                     &:nth-of-type(1), &:nth-of-type(2)
                         display: none
