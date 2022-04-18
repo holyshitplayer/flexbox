@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Новый стандарт вёрстки Flexbox. Детальное руководство">
-    <title>Свойства для элементов</title>
+    <title>Элементы</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="libs/mmenu-light.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -21,8 +21,8 @@
                     <ul>
                         <li><a class="header__menu__link" href="index.html">Главная</a></li>
                         <li><a class="header__menu__link" href="theory.html">Терминология</a></li>
-                        <li><a class="header__menu__link" href="container.html">Свойства для контейнера</a></li>
-                        <li><a class="header__menu__link" href="items.html">Свойства для элементов</a></li>
+                        <li><a class="header__menu__link" href="container.html">Контейнер</a></li>
+                        <li><a class="header__menu__link" href="items.html">Элементы</a></li>
                         <li><a class="header__menu__link" href="examples.html">Примеры</a></li>
                     </ul>
                 </nav>
@@ -34,16 +34,137 @@
         <div class="page-container">
             <section class="page-banner">
                 <p class="page-banner__background">Properties</p>
-                <h1 class="page-banner__title">Свойства для элементов</h1>
+                <h1 class="page-banner__title">Элементы</h1>
             </section>
             <section class="page-content">
                 <div class="page-block">
-                    <h3 class="page-block__title title">Немного про Flexbox</h3>
+                    <h3 class="page-block__title title">order</h3>
                     <div class="page-block__text">
-                        <p><b>The Flexbox Layout</b> (Flexible Box) (рекомендация-кандидат W3C по состоянию на октябрь 2017 г.) направлен на обеспечение более эффективного способа компоновки, выравнивания и распределения пространства между элементами в контейнере, даже если их размер неизвестен и/или динамичен (таким образом, слово «гибкий»).</p>
-                        <p>Основная идея гибкого макета состоит в том, чтобы дать контейнеру возможность изменять ширину/высоту (и порядок) своих элементов, чтобы наилучшим образом заполнить доступное пространство (в основном, чтобы приспособиться ко всем типам устройств отображения и размерам экрана). Гибкий контейнер расширяет элементы, чтобы заполнить доступное свободное пространство, или сжимает их, чтобы предотвратить переполнение.</p>
-                        <p>Самое главное, макет flexbox не зависит от направления, в отличие от обычных макетов (блок, который расположен по вертикали, и встроенный, который расположен по горизонтали). Хотя они хорошо работают для страниц, им не хватает гибкости (без каламбура) для поддержки больших или сложных приложений (особенно когда речь идет об изменении ориентации, изменении размера, растяжении, сжатии и т. д.).</p>
-                        <p><b>Примечание:</b> Макет Flexbox наиболее подходит для компонентов приложения и мелкомасштабных макетов, тогда как макет Grid предназначен для крупномасштабных макетов.</p>
+                        <p>По умолчанию flex-элементы располагаются в исходном порядке. Однако свойство order управляет порядком, в котором они появляются в flex-контейнере.</p>
+                        <div class="page-block__schemes__order">
+                            <div class="page-block__scheme order">
+                                <span>order</span>
+    
+                                <div>3</div>
+                                <div>2</div>
+                                <div>1</div>
+                                <div>1</div>
+                                <div>1</div>
+                            </div>
+                            <div class="page-block__scheme order">
+                                <span>order</span>
+    
+                                <div>5</div>
+                                <div>-1</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>4</div>
+                            </div>
+                            <div class="page-block__scheme order">
+                                <span>order</span>
+    
+                                <div>99</div>
+                                <div>50</div>
+                                <div>1</div>
+                            </div>
+                        </div>
+                        <div class="css wrap">
+                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">order:</span> <span class="css value">5</span><span class="css punctuation">;</span> <span class="css comment">/* default is 0 */</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <p>Элементы с тем же порядком возвращаются к исходному порядку.</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">flex-grow</h3>
+                    <div class="page-block__text">
+                        <p>Это определяет способность гибкого элемента увеличиваться при необходимости. Он принимает безразмерное значение, которое служит пропорцией. Он определяет, какое количество доступного пространства внутри гибкого контейнера должен занимать элемент.</p>
+                        <div class="page-block__schemes">
+                            <div class="page-block__scheme flex-grow">
+                                <span>flex-grow</span>
+    
+                                <div>1</div>
+                                <div>1</div>
+                                <div>1</div>
+                            </div>
+                            <div class="page-block__scheme flex-grow">
+                                <span>flex-grow</span>
+    
+                                <div>1</div>
+                                <div>2</div>
+                                <div>1</div>
+                            </div>
+                        </div>
+                        <p>Если для всех элементов flex-grow установлен в 1, оставшееся пространство в контейнере будет распределено поровну между всеми дочерними элементами. Если один из дочерних элементов имеет значение 2, этот дочерний элемент будет занимать в два раза больше места, чем один из других (или, по крайней мере, попытается).</p>
+                        <div class="css wrap">
+                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">flex-grow:</span> <span class="css value">4</span><span class="css punctuation">;</span> <span class="css comment">/* default is 0 */</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <p>Отрицательные числа недействительны.</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">flex-shrink</h3>
+                    <div class="page-block__text">
+                        <p>Это определяет способность гибкого элемента сжиматься при необходимости.</p>
+                        <div class="css wrap">
+                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">flex-shrink:</span> <span class="css value">3</span><span class="css punctuation">;</span> <span class="css comment">/* default is 1 */</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <p>Отрицательные числа недействительны.</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">flex-basis</h3>
+                    <div class="page-block__text">
+                        <p>Это определяет размер элемента по умолчанию до распределения оставшегося пространства. Это может быть длина (например, 20%, 5rem и т. д.) или ключевое слово. Ключевое слово auto означает «посмотрите на мое свойство ширины или высоты» (что временно выполнялось ключевым словом main-size, пока оно не стало устаревшим). Ключевое слово content означает «размер на основе содержимого элемента» — это ключевое слово еще недостаточно хорошо поддерживается, поэтому его трудно протестировать и еще труднее узнать, что делают его собратья max-content, min-content и fit-content.</p>
+                        <div class="css wrap">
+                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">flex-basis:</span> <span class="css value">⠀⠀| auto</span><span class="css punctuation">;</span> <span class="css comment">/* default is auto */</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <p>Если установлено значение 0, дополнительное пространство вокруг контента не учитывается. Если установлено значение auto, дополнительное пространство распределяется на основе его значения flex-grow. См. этот рисунок.</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">flex</h3>
+                    <div class="page-block__text">
+                        <p>Это сокращение для flex-grow, flex-shrink и flex-basis вместе взятых. Второй и третий параметры (flex-shrink и flex-basis) являются необязательными. По умолчанию 0 1 auto, но если вы установите его с помощью одного числового значения, например flex: 5;, это изменит flex-basis на 0%, так что это похоже на установку flex-grow: 5; гибкая термоусадка: 1; flex-база: 0%;.</p>
+                        <div class="css wrap">
+                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">flex:</span> <span class="css value">none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]</span><span class="css punctuation">;</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <p><b>Рекомендуется использовать это сокращенное свойство</b>, а не задавать отдельные свойства. Сокращение разумно устанавливает другие значения.</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">align-self</h3>
+                    <div class="page-block__text">
+                        <p>Это позволяет переопределить выравнивание по умолчанию (или указанное align-items) для отдельных flex-элементов.</p>
+                        <div class="page-block__schemes">
+                            <div class="page-block__scheme align-self">
+                                <span>align-items: flex-start</span>
+    
+                                <div>flex-start</div>
+                                <div>flex-start</div>
+                                <div>flex-start</div>
+                                <div>flex-end</div>
+                                <div>flex-start</div>
+
+                                <span>align-self: flex-end</span>
+                            </div>
+                        </div>
+                        <p>Пожалуйста, смотрите объяснение align-items, чтобы понять доступные значения.</p>
+                        <div class="css wrap">
+                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code><span class="css property">align-self:</span> <span class="css value">auto | flex-start | flex-end | center | baseline | stretch</span><span class="css punctuation">;</span> <span class="css comment">/* default is 0 */</span></code>
+                            <code><span class="css punctuation">}</span></code>
+                        </div>
+                        <p>Обратите внимание, что float, clear и vertical-align не влияют на flex-элемент.</p>
                     </div>
                 </div>
             </section>
