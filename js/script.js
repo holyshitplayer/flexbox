@@ -159,3 +159,17 @@ if (document.querySelector(".modal")) {
         });
     });
 };
+
+// ОТСТУПЫ У HTML РАЗМЕТКИ
+if (document.querySelector("code[data-level]")) {
+    document.addEventListener("DOMContentLoaded", () => {
+        let codeLines = document.querySelectorAll("code[data-level]");
+        codeLines.forEach(codeLine => {
+            let nestingLevel = codeLine.getAttribute("data-level"),
+                firstSpan = codeLine.firstChild;
+            let newSpan = document.createElement("span");
+            newSpan.innerHTML = "&nbsp;".repeat(4 * nestingLevel);
+            codeLine.insertBefore(newSpan, firstSpan);
+        });
+    });
+};

@@ -62,9 +62,9 @@
                             </div>
                         </div>
                         <div class="css wrap">
-                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
-                            <code><span class="css property">order:</span> <span class="css value">5</span><span class="css punctuation">;</span> <span class="css comment">/* default is 0 */</span></code>
-                            <code><span class="css punctuation">}</span></code>
+                            <code data-level="0"><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code data-level="1"><span class="css property">order:</span> <span class="css value">5</span><span class="css punctuation">;</span> <span class="css comment">/* default is 0 */</span></code>
+                            <code data-level="0"><span class="css punctuation">}</span></code>
                         </div>
                         <p>Элементы с тем же порядком возвращаются к исходному порядку.</p>
                     </div>
@@ -91,9 +91,9 @@
                         </div>
                         <p>Если для всех элементов flex-grow установлен в 1, оставшееся пространство в контейнере будет распределено поровну между всеми дочерними элементами. Если один из дочерних элементов имеет значение 2, этот дочерний элемент будет занимать в два раза больше места, чем один из других (или, по крайней мере, попытается).</p>
                         <div class="css wrap">
-                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
-                            <code><span class="css property">flex-grow:</span> <span class="css value">4</span><span class="css punctuation">;</span> <span class="css comment">/* default is 0 */</span></code>
-                            <code><span class="css punctuation">}</span></code>
+                            <code data-level="0"><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code data-level="1"><span class="css property">flex-grow:</span> <span class="css value">4</span><span class="css punctuation">;</span> <span class="css comment">/* default is 0 */</span></code>
+                            <code data-level="0"><span class="css punctuation">}</span></code>
                         </div>
                         <p>Отрицательные числа недействительны.</p>
                     </div>
@@ -103,9 +103,9 @@
                     <div class="page-block__content">
                         <p>Это определяет способность гибкого элемента сжиматься при необходимости.</p>
                         <div class="css wrap">
-                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
-                            <code><span class="css property">flex-shrink:</span> <span class="css value">3</span><span class="css punctuation">;</span> <span class="css comment">/* default is 1 */</span></code>
-                            <code><span class="css punctuation">}</span></code>
+                            <code data-level="0"><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code data-level="1"><span class="css property">flex-shrink:</span> <span class="css value">3</span><span class="css punctuation">;</span> <span class="css comment">/* default is 1 */</span></code>
+                            <code data-level="0"><span class="css punctuation">}</span></code>
                         </div>
                         <p>Отрицательные числа недействительны.</p>
                     </div>
@@ -115,9 +115,9 @@
                     <div class="page-block__content">
                         <p>Это определяет размер элемента по умолчанию до распределения оставшегося пространства. Это может быть длина (например, 20%, 5rem и т. д.) или ключевое слово. Ключевое слово auto означает «посмотрите на мое свойство ширины или высоты» (что временно выполнялось ключевым словом main-size, пока оно не стало устаревшим). Ключевое слово content означает «размер на основе содержимого элемента» — это ключевое слово еще недостаточно хорошо поддерживается, поэтому его трудно протестировать и еще труднее узнать, что делают его собратья max-content, min-content и fit-content.</p>
                         <div class="css wrap">
-                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
-                            <code><span class="css property">flex-basis:</span> <span class="css value">⠀⠀| auto</span><span class="css punctuation">;</span> <span class="css comment">/* default is auto */</span></code>
-                            <code><span class="css punctuation">}</span></code>
+                            <code data-level="0"><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code data-level="1"><span class="css property">flex-basis:</span> <span class="css value">⠀⠀| auto</span><span class="css punctuation">;</span> <span class="css comment">/* default is auto */</span></code>
+                            <code data-level="0"><span class="css punctuation">}</span></code>
                         </div>
                         <p>Если установлено значение 0, дополнительное пространство вокруг контента не учитывается. Если установлено значение auto, дополнительное пространство распределяется на основе его значения flex-grow. См. этот рисунок.</p>
                     </div>
@@ -127,9 +127,9 @@
                     <div class="page-block__content">
                         <p>Это сокращение для flex-grow, flex-shrink и flex-basis вместе взятых. Второй и третий параметры (flex-shrink и flex-basis) являются необязательными. По умолчанию 0 1 auto, но если вы установите его с помощью одного числового значения, например flex: 5;, это изменит flex-basis на 0%, так что это похоже на установку flex-grow: 5; гибкая термоусадка: 1; flex-база: 0%;.</p>
                         <div class="css wrap">
-                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
-                            <code><span class="css property">flex:</span> <span class="css value">none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]</span><span class="css punctuation">;</span></code>
-                            <code><span class="css punctuation">}</span></code>
+                            <code data-level="0"><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code data-level="1"><span class="css property">flex:</span> <span class="css value">none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]</span><span class="css punctuation">;</span></code>
+                            <code data-level="0"><span class="css punctuation">}</span></code>
                         </div>
                         <p><b>Рекомендуется использовать это сокращенное свойство</b>, а не задавать отдельные свойства. Сокращение разумно устанавливает другие значения.</p>
                     </div>
@@ -153,9 +153,9 @@
                         </div>
                         <p>Пожалуйста, смотрите объяснение align-items, чтобы понять доступные значения.</p>
                         <div class="css wrap">
-                            <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
-                            <code><span class="css property">align-self:</span> <span class="css value">auto | flex-start | flex-end | center | baseline | stretch</span><span class="css punctuation">;</span> <span class="css comment">/* default is 0 */</span></code>
-                            <code><span class="css punctuation">}</span></code>
+                            <code data-level="0"><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
+                            <code data-level="1"><span class="css property">align-self:</span> <span class="css value">auto | flex-start | flex-end | center | baseline | stretch</span><span class="css punctuation">;</span> <span class="css comment">/* default is 0 */</span></code>
+                            <code data-level="0"><span class="css punctuation">}</span></code>
                         </div>
                         <p>Обратите внимание, что float, clear и vertical-align не влияют на flex-элемент.</p>
                     </div>
