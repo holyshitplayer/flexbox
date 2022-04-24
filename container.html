@@ -15,9 +15,9 @@
         <div class="container">
             <div class="header__links">
                 <a class="header__links__logo" href="index.html">Flexbox</a>
-                <a class="header__menu__open-menu" href="#menu"><img src="img/menu-btn.svg" alt="Open menu"></a>
+                <a class="header__menu__open-menu" href="#menu"><img src="img/menu/menu-btn.svg" alt="Open menu"></a>
                 <nav class="header__menu">
-                    <div class="header__menu__close-menu"><img src="img/menu-close-btn.svg" alt="Close menu"></div>
+                    <div class="header__menu__close-menu"><img src="img/menu/menu-close-btn.svg" alt="Close menu"></div>
                     <ul>
                         <li><a class="header__menu__link" href="index.html">Главная</a></li>
                         <li><a class="header__menu__link" href="theory.html">Терминология</a></li>
@@ -39,7 +39,7 @@
             <section class="page-content">
                 <div class="page-block">
                     <h3 class="page-block__title title">display</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это определяет гибкий контейнер; inline или block в зависимости от заданного значения. Он включает гибкий контекст для всех своих прямых дочерних элементов.</p>
                         <div class="css wrap">
                             <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">flex-direction</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это устанавливает главную ось, тем самым определяя направление размещения гибких элементов в контейнере flex. Flexbox — это (помимо опциональной обертки) концепция макета с одним направлением. Думайте о гибких элементах как о расположении в первую очередь либо в горизонтальных рядах, либо в вертикальных столбцах.</p>
                         <div class="page-block__schemes">
                             <div class="page-block__schemes__fdr">
@@ -110,7 +110,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">flex-wrap</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>По умолчанию все flex-элементы будут пытаться разместиться на одной строке. Вы можете изменить это и разрешить элементам переноситься по мере необходимости с помощью этого свойства.</p>
                         <div class="page-block__schemes">
                             <div class="page-block__scheme fw">
@@ -158,7 +158,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">flex-flow</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это сокращение для свойств flex-direction и flex-wrap, которые вместе определяют главную и поперечную оси flex-контейнера. Значение по умолчанию — row nowrap.</p>
                         <div class="css wrap">
                             <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
@@ -169,7 +169,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">justify-content</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это определяет выравнивание вдоль главной оси. Это помогает распределять дополнительное свободное пространство, когда либо все гибкие элементы в строке негибкие, либо гибкие, но достигли своего максимального размера. Он также осуществляет некоторый контроль над выравниванием элементов, когда они выходят за пределы строки.</p>
                         <div class="page-block__schemes">
                             <div class="page-block__scheme jcfs">
@@ -238,7 +238,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">align-items</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это определяет поведение по умолчанию для того, как flex-элементы располагаются вдоль поперечной оси на текущей строке. Думайте об этом как о версии с выравниванием содержимого для поперечной оси (перпендикулярной главной оси).</p>
                         <div class="page-block__schemes">
                             <div class="page-block__scheme aifs">
@@ -299,7 +299,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">align-content</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это выравнивает строки гибкого контейнера внутри, когда на поперечной оси есть дополнительное пространство, аналогично тому, как justify-content выравнивает отдельные элементы внутри основной оси.</p>
                         <p><b>Примечание:</b> Это свойство действует только для многострочных гибких контейнеров, где для flex-wrap установлено значение wrap или wrap-reverse). Однострочный гибкий контейнер (т.е. где для flex-wrap установлено значение по умолчанию, без переноса) не будет отражать align-content.</p>
                         <div class="page-block__schemes">
@@ -396,7 +396,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">gap, row-gap, column-gap</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Свойство gap явно управляет пространством между flex-элементами. Это расстояние применяется только между элементами, а не на внешних краях.</p>
                         <div class="page-block__schemes">
                             <div class="page-block__scheme gap10">

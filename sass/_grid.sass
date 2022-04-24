@@ -1,4 +1,6 @@
 @media (max-width: 1200px)
+    .page-container
+        width: 80%
     .hero
         &__text
             h1
@@ -8,8 +10,15 @@
                 width: 100%
                 div
                     height: 150px
+    .modal
+        &__content
+            &__scheme
+                padding: 50px
 
 @media (max-width: 992px)
+    .page-container
+        width: 100%
+        padding: 0 30px
     .elements
         display: none
     .header
@@ -55,12 +64,18 @@
                 transform: skew(0, 0)
                 div
                     height: 125px
-    .pages
+    .sections
         &__scheme
             div
                 height: 56px
         &__examples
             width: 100%
+    .modal
+        width: calc( 100% - 40px )
+    .example
+        &__pricing-tables
+            &__trial
+                text-align: center
 
 @media (max-width: 768px)
     .hero
@@ -69,7 +84,7 @@
             text-align: center
         &__illustration
             display: none
-    .pages
+    .sections
         &__block
             padding: 30px 0
             &__content
@@ -88,6 +103,9 @@
             margin-top: 0
             &__links
                 gap: 5px
+            &__tab-links
+                a:nth-child(2)
+                    display: none
         &__scheme
             transform: skew(0, 0)
         &__example
@@ -108,7 +126,7 @@
         margin-bottom: 30px
         &__title
             margin-bottom: 10px
-        &__text
+        &__content
             text-align: justify
             img
                 width: 100%
@@ -149,9 +167,68 @@
                 div
                     &:nth-child(2)
                         display: none
-                    
+        &__examples
+            gap: 10px
+            margin-top: 10px
+        &__example
+            width: calc( 100% / 2 - 20px / 2 )
+            &__scheme
+                height: 150px
+                padding: 10px
+            &__content
+                padding: 10px
+    .modal
+        &__title
+            margin-bottom: 10px
+        &__content
+            &__scheme
+                padding: 20px
+                margin-bottom: 10px
+    .example
+        &__item-card
+            padding: 10px
+        &__icon-buttons
+            padding: 10px
+        &__pricing-tables
+            gap: 10px
+            &__table
+                font-size: 0.875rem
+            &__header
+                padding: 10px
+            &__body
+                padding: 10px
+            &__footer
+                padding: 10px
+        &__website-header
+            padding: 4px 10px
+        &__two-columns
+            gap: 10px
+            padding: 10px
+            &__header
+                padding: 10px
+            &__column
+                padding: 10px
+            &__footer
+                padding: 10px
+        &__holy-grail
+            gap: 10px
+            padding: 10px
+            &__header
+                padding: 10px
+            &__sidebar
+                padding: 10px
+            &__main
+                padding: 10px
+            &__footer
+                padding: 10px
 
 @media (max-width: 576px)
+    .container
+        padding: 0 15px
+    .page-container
+        padding: 0 15px
+    .title
+        font-size: 1.125rem
     .header
         &__menu
             &__open-menu
@@ -165,7 +242,7 @@
             h1
                 margin: 0 0 20px 0
                 font-size: 1.5rem
-    .pages
+    .sections
         &__scheme
             div
                 height: 48px
@@ -184,8 +261,6 @@
                 margin-top: 10px
                 transform: translateY(0)
                 position: unset
-                a:nth-last-child(2)
-                    display: none
     .footer
         text-align: center
     .page-banner
@@ -210,18 +285,26 @@
                 div
                     &:nth-of-type(1), &:nth-of-type(2)
                         display: none
+        &__example
+            width: 100%
+    .example
+        &__scheme
+            display: none
+    .modal
+        &__content
+            &__scheme-image
+                display: block
 
 @media (max-width: 375px)
-    .pages
+    .sections
         &__examples
             background: transparent
             box-shadow: none
             margin-top: 0
+            padding: 0
             &__links
                 margin-top: 0
-                a
-                    display: none
-                    &:last-child
-                        display: block
+            &__tab-links
+                display: none
         &__example.active
             display: none

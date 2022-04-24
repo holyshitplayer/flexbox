@@ -1,26 +1,4 @@
 @font-face {
-	font-family: 'Circe ExtraLight';
-	src: url('../fonts/Circe-ExtraLight.eot');
-	src: local('../fonts/Circe ExtraLight'), local('../fonts/Circe-ExtraLight'),
-		url('../fonts/Circe-ExtraLight.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Circe-ExtraLight.woff') format('woff'),
-		url('../fonts/Circe-ExtraLight.ttf') format('truetype');
-	font-weight: 200;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Circe Light';
-	src: url('../fonts/Circe-Light.eot');
-	src: local('../fonts/Circe Light'), local('../fonts/Circe-Light'),
-		url('../fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Circe-Light.woff') format('woff'),
-		url('../fonts/Circe-Light.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
 	font-family: 'Circe Regular';
 	src: url('../fonts/Circe-Regular.eot');
 	src: local('../fonts/Circe'), local('../fonts/Circe-Regular'),
@@ -42,29 +20,10 @@
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'Circe ExtraBold';
-	src: url('../fonts/Circe-ExtraBold.eot');
-	src: local('../fonts/Circe ExtraBold'), local('../fonts/Circe-ExtraBold'),
-		url('../fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Circe-ExtraBold.woff') format('woff'),
-		url('../fonts/Circe-ExtraBold.ttf') format('truetype');
-	font-weight: 800;
-	font-style: normal;
-}
-
-@mixin extralight {
-    font-family: 'Circe ExtraLight', sans-serif;
-}
-@mixin light {
-    font-family: 'Circe Light', sans-serif;
-}
 @mixin regular {
     font-family: 'Circe Regular', sans-serif;
 }
+
 @mixin bold {
     font-family: 'Circe Bold', sans-serif;
-}
-@mixin extrabold {
-    font-family: 'Circe ExtraBold', sans-serif;
 }

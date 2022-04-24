@@ -15,9 +15,9 @@
         <div class="container">
             <div class="header__links">
                 <a class="header__links__logo" href="index.html">Flexbox</a>
-                <a class="header__menu__open-menu" href="#menu"><img src="img/menu-btn.svg" alt="Open menu"></a>
+                <a class="header__menu__open-menu" href="#menu"><img src="img/menu/menu-btn.svg" alt="Open menu"></a>
                 <nav class="header__menu">
-                    <div class="header__menu__close-menu"><img src="img/menu-close-btn.svg" alt="Close menu"></div>
+                    <div class="header__menu__close-menu"><img src="img/menu/menu-close-btn.svg" alt="Close menu"></div>
                     <ul>
                         <li><a class="header__menu__link" href="index.html">Главная</a></li>
                         <li><a class="header__menu__link" href="theory.html">Терминология</a></li>
@@ -39,7 +39,7 @@
             <section class="page-content">
                 <div class="page-block">
                     <h3 class="page-block__title title">order</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>По умолчанию flex-элементы располагаются в исходном порядке. Однако свойство order управляет порядком, в котором они появляются в flex-контейнере.</p>
                         <div class="page-block__schemes">
                             <div class="page-block__scheme order">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">flex-grow</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это определяет способность гибкого элемента увеличиваться при необходимости. Он принимает безразмерное значение, которое служит пропорцией. Он определяет, какое количество доступного пространства внутри гибкого контейнера должен занимать элемент.</p>
                         <div class="page-block__schemes">
                             <div class="page-block__scheme fg">
@@ -100,7 +100,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">flex-shrink</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это определяет способность гибкого элемента сжиматься при необходимости.</p>
                         <div class="css wrap">
                             <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">flex-basis</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это определяет размер элемента по умолчанию до распределения оставшегося пространства. Это может быть длина (например, 20%, 5rem и т. д.) или ключевое слово. Ключевое слово auto означает «посмотрите на мое свойство ширины или высоты» (что временно выполнялось ключевым словом main-size, пока оно не стало устаревшим). Ключевое слово content означает «размер на основе содержимого элемента» — это ключевое слово еще недостаточно хорошо поддерживается, поэтому его трудно протестировать и еще труднее узнать, что делают его собратья max-content, min-content и fit-content.</p>
                         <div class="css wrap">
                             <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">flex</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это сокращение для flex-grow, flex-shrink и flex-basis вместе взятых. Второй и третий параметры (flex-shrink и flex-basis) являются необязательными. По умолчанию 0 1 auto, но если вы установите его с помощью одного числового значения, например flex: 5;, это изменит flex-basis на 0%, так что это похоже на установку flex-grow: 5; гибкая термоусадка: 1; flex-база: 0%;.</p>
                         <div class="css wrap">
                             <code><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="page-block">
                     <h3 class="page-block__title title">align-self</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p>Это позволяет переопределить выравнивание по умолчанию (или указанное align-items) для отдельных flex-элементов.</p>
                         <div class="page-block__schemes">
                             <div class="page-block__scheme as">

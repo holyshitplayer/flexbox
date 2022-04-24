@@ -15,9 +15,9 @@
         <div class="container">
             <div class="header__links">
                 <a class="header__links__logo" href="index.html">Flexbox</a>
-                <a class="header__menu__open-menu" href="#menu"><img src="img/menu-btn.svg" alt="Open menu"></a>
+                <a class="header__menu__open-menu" href="#menu"><img src="img/menu/menu-btn.svg" alt="Open menu"></a>
                 <nav class="header__menu">
-                    <div class="header__menu__close-menu"><img src="img/menu-close-btn.svg" alt="Close menu"></div>
+                    <div class="header__menu__close-menu"><img src="img/menu/menu-close-btn.svg" alt="Close menu"></div>
                     <ul>
                         <li><a class="header__menu__link" href="index.html">Главная</a></li>
                         <li><a class="header__menu__link" href="theory.html">Терминология</a></li>
@@ -38,12 +38,70 @@
             </section>
             <section class="page-content">
                 <div class="page-block">
-                    <h3 class="page-block__title title">Немного про Flexbox</h3>
-                    <div class="page-block__text">
+                    <div class="page-block__content">
                         <p><b>The Flexbox Layout</b> (Flexible Box) (рекомендация-кандидат W3C по состоянию на октябрь 2017 г.) направлен на обеспечение более эффективного способа компоновки, выравнивания и распределения пространства между элементами в контейнере, даже если их размер неизвестен и/или динамичен (таким образом, слово «гибкий»).</p>
-                        <p>Основная идея гибкого макета состоит в том, чтобы дать контейнеру возможность изменять ширину/высоту (и порядок) своих элементов, чтобы наилучшим образом заполнить доступное пространство (в основном, чтобы приспособиться ко всем типам устройств отображения и размерам экрана). Гибкий контейнер расширяет элементы, чтобы заполнить доступное свободное пространство, или сжимает их, чтобы предотвратить переполнение.</p>
-                        <p>Самое главное, макет flexbox не зависит от направления, в отличие от обычных макетов (блок, который расположен по вертикали, и встроенный, который расположен по горизонтали). Хотя они хорошо работают для страниц, им не хватает гибкости (без каламбура) для поддержки больших или сложных приложений (особенно когда речь идет об изменении ориентации, изменении размера, растяжении, сжатии и т. д.).</p>
-                        <p><b>Примечание:</b> Макет Flexbox наиболее подходит для компонентов приложения и мелкомасштабных макетов, тогда как макет Grid предназначен для крупномасштабных макетов.</p>
+                        <div class="page-block__examples">
+                            <div class="page-block__example">
+                                <a href="#" class="page-block__example__scheme modal__open" data-modal="item-card">
+                                    <img src="img/examples/item-card/item-card.svg" alt="Item card">
+                                </a>
+                                <div class="page-block__example__content">
+                                    <h3 class="page-block__example__title">Карточка товара</h3>
+                                    <p class="page-block__example__description">Всем известная карточка товара, которая встречается почти на любом сайте.</p>
+                                    <a href="#" class="page-block__example__link white-link modal__open" data-modal="item-card">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="page-block__example">
+                                <a href="#" class="page-block__example__scheme modal__open" data-modal="icon-buttons">
+                                    <img src="img/examples/icon-buttons/icon-buttons.svg" alt="Icon buttons">
+                                </a>
+                                <div class="page-block__example__content">
+                                    <h3 class="page-block__example__title">Кнопки с иконками</h3>
+                                    <p class="page-block__example__description">Сейчас стали популярными кнопки с иконками, которые очень легко сделать на Flexbox.</p>
+                                    <a href="#" class="page-block__example__link white-link modal__open" data-modal="icon-buttons">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="page-block__example">
+                                <a href="#" class="page-block__example__scheme modal__open" data-modal="pricing-tables">
+                                    <img src="img/examples/pricing-tables/pricing-tables.svg" alt="Pricing tables">
+                                </a>
+                                <div class="page-block__example__content">
+                                    <h3 class="page-block__example__title">Таблица цен</h3>
+                                    <p class="page-block__example__description">Практически каждый продающий лендинг имеет в себе этот элемент.</p>
+                                    <a href="#" class="page-block__example__link white-link modal__open" data-modal="pricing-tables">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="page-block__example">
+                                <a href="#" class="page-block__example__scheme modal__open" data-modal="website-header">
+                                    <img src="img/examples/website-header/website-header.svg" alt="Website header">
+                                </a>
+                                <div class="page-block__example__content">
+                                    <h3 class="page-block__example__title">Шапка сайта</h3>
+                                    <p class="page-block__example__description">Компонент любого веб сайта, содержащий много мелочей, верстается "на раз-два".</p>
+                                    <a href="#" class="page-block__example__link white-link modal__open" data-modal="website-header">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="page-block__example">
+                                <a href="#" class="page-block__example__scheme modal__open" data-modal="two-columns">
+                                    <img src="img/examples/two-columns/two-columns.svg" alt="Two columns">
+                                </a>
+                                <div class="page-block__example__content">
+                                    <h3 class="page-block__example__title">Макет "Два столбца"</h3>
+                                    <p class="page-block__example__description">Макет, который легко найдёт применение на любом сайте, чтобы разделить его контент.</p>
+                                    <a href="#" class="page-block__example__link white-link modal__open" data-modal="two-columns">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="page-block__example">
+                                <a href="#" class="page-block__example__scheme modal__open" data-modal="holy-grail">
+                                    <img src="img/examples/holy-grail/holy-grail.svg" alt="Holy grail">
+                                </a>
+                                <div class="page-block__example__content">
+                                    <h3 class="page-block__example__title">Макет "Holy Grail"</h3>
+                                    <p class="page-block__example__description">Классический макет, который имеет несколько столбцов одинаковой высоты.</p>
+                                    <a href="#" class="page-block__example__link white-link modal__open" data-modal="holy-grail">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -59,6 +117,224 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="item-card">
+        <h3 class="modal__title title">
+            <span>Карточка товара</span>
+            <a href="#" class="modal__close"><img src="img/menu/menu-close-btn.svg" alt="Close modal"></a>
+        </h3>
+        <div class="modal__content example">
+            <div class="modal__content__scheme">
+                <img src="img/examples/item-card/item-card.svg" class="modal__content__scheme-image" alt="Item card">
+                <div class="example__scheme example__item-card">
+                    <a class="example__item-card__image"><img src="https://plasticsurgery-ua.org/wp-content/uploads/2016/11/default-placeholder.png" alt="Image"></a>
+                    <h3 class="example__item-card__title">Заголовок</h3>
+                    <p class="example__item-card__description">Это короткое описание в карточке товара.</p>
+                    <a class="example__item-card__link white-link">Действие</a>
+                </div>
+            </div>
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
+            <div class="css wrap">
+                <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                <code><span class="css property">display:</span> <span class="css value">flex</span><span class="css punctuation">;</span> <span class="css comment">/* or inline-flex */</span></code>
+                <code><span class="css punctuation">}</span></code>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="icon-buttons">
+        <h3 class="modal__title title">
+            <span>Кнопки с иконками</span>
+            <a href="#" class="modal__close"><img src="img/menu/menu-close-btn.svg" alt="Close modal"></a>
+        </h3>
+        <div class="modal__content example">
+            <div class="modal__content__scheme">
+                <img src="img/examples/icon-buttons/icon-buttons.svg" class="modal__content__scheme-image" alt="Icon buttons">
+                <div class="example__scheme example__icon-buttons">
+                    <a class="example__icon-buttons__link white-link">
+                        <span class="example__icon-buttons__icon"></span>
+                        <span class="example__icon-buttons__social">Twitter</span>
+                    </a>
+                    <a class="example__icon-buttons__link white-link">
+                        <span class="example__icon-buttons__icon"></span>
+                        <span class="example__icon-buttons__social">Facebook</span>
+                    </a>
+                    <a class="example__icon-buttons__link white-link">
+                        <span class="example__icon-buttons__icon"></span>
+                        <span class="example__icon-buttons__social">Instagram</span>
+                    </a>
+                    <a class="example__icon-buttons__link white-link">
+                        <span class="example__icon-buttons__icon"></span>
+                        <span class="example__icon-buttons__social">GitHub</span>
+                    </a>
+                    <a class="example__icon-buttons__link white-link">
+                        <span class="example__icon-buttons__icon"></span>
+                        <span class="example__icon-buttons__social">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
+            <div class="css wrap">
+                <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                <code><span class="css property">display:</span> <span class="css value">flex</span><span class="css punctuation">;</span> <span class="css comment">/* or inline-flex */</span></code>
+                <code><span class="css punctuation">}</span></code>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="pricing-tables">
+        <h3 class="modal__title title">
+            <span>Таблица цен</span>
+            <a href="#" class="modal__close"><img src="img/menu/menu-close-btn.svg" alt="Close modal"></a>
+        </h3>
+        <div class="modal__content example">
+            <div class="modal__content__scheme">
+                <img src="img/examples/pricing-tables/pricing-tables.svg" class="modal__content__scheme-image" alt="Pricing tables">
+                <div class="example__scheme example__pricing-tables">
+                    <div class="example__pricing-tables__table">
+                        <div class="example__pricing-tables__header">
+                            <h3 class="example__pricing-tables__title">Free</h3>
+                            <div class="example__pricing-tables__subtitle">Forever, promise.</div>
+                        </div>
+                        <div class="example__pricing-tables__body">
+                            <p class="example__pricing-tables__feature">Unlimited items</p>
+                            <p class="example__pricing-tables__feature">2 Team Members</p>
+                            <p class="example__pricing-tables__feature">3 Projects</p>
+                            <p class="example__pricing-tables__feature">Cloud Storage (2Gb)</p>
+                        </div>
+                        <div class="example__pricing-tables__footer">
+                            <p class="example__pricing-tables__price">$ <span>0</span> /month</p>
+                            <p class="example__pricing-tables__trial">14-day money back guarantee</p>
+                            <a class="example__pricing-tables__link white-link">Choose</a>
+                        </div>
+                    </div>
+                    <div class="example__pricing-tables__table best">
+                        <div class="example__pricing-tables__header">
+                            <h3 class="example__pricing-tables__title">Lite Pro</h3>
+                            <div class="example__pricing-tables__subtitle">For small teams.</div>
+                        </div>
+                        <div class="example__pricing-tables__body">
+                            <p class="example__pricing-tables__feature">Unlimited items</p>
+                            <p class="example__pricing-tables__feature">10 Team Members</p>
+                            <p class="example__pricing-tables__feature">Unlimited Projects</p>
+                            <p class="example__pricing-tables__feature">Cloud Storage (1Tb)</p>
+                            <p class="example__pricing-tables__feature">Offline version</p>
+                            <p class="example__pricing-tables__feature">Share to non-sign up</p>
+                            <p class="example__pricing-tables__feature">White label version</p>
+                        </div>
+                        <div class="example__pricing-tables__footer">
+                            <p class="example__pricing-tables__price">$ <span>10</span> /month</p>
+                            <p class="example__pricing-tables__trial">14-day money back guarantee</p>
+                            <a class="example__pricing-tables__link white-link">Choose</a>
+                        </div>
+                    </div>
+                    <div class="example__pricing-tables__table">
+                        <div class="example__pricing-tables__header">
+                            <h3 class="example__pricing-tables__title">Enterprise</h3>
+                            <div class="example__pricing-tables__subtitle">For big companies.</div>
+                        </div>
+                        <div class="example__pricing-tables__body">
+                            <p class="example__pricing-tables__feature">Unlimited items</p>
+                            <p class="example__pricing-tables__feature">Unlimited Team Members</p>
+                            <p class="example__pricing-tables__feature">Unlimited Projects</p>
+                            <p class="example__pricing-tables__feature">Unlimited Cloud Storage</p>
+                            <p class="example__pricing-tables__feature">Offline version</p>
+                            <p class="example__pricing-tables__feature">Share to non-sign up</p>
+                            <p class="example__pricing-tables__feature">Your brand on the UI</p>
+                            <p class="example__pricing-tables__feature">A Lion Dance 1 time a year</p>
+                        </div>
+                        <div class="example__pricing-tables__footer">
+                            <p class="example__pricing-tables__price">$ <span>40</span> /month</p>
+                            <p class="example__pricing-tables__trial">14-day money back guarantee</p>
+                            <a class="example__pricing-tables__link white-link">Choose</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
+            <div class="css wrap">
+                <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                <code><span class="css property">display:</span> <span class="css value">flex</span><span class="css punctuation">;</span> <span class="css comment">/* or inline-flex */</span></code>
+                <code><span class="css punctuation">}</span></code>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="website-header">
+        <h3 class="modal__title title">
+            <span>Шапка сайта</span>
+            <a href="#" class="modal__close"><img src="img/menu/menu-close-btn.svg" alt="Close modal"></a>
+        </h3>
+        <div class="modal__content example">
+            <div class="modal__content__scheme">
+                <img src="img/examples/website-header/website-header.svg" class="modal__content__scheme-image" alt="Website header">
+                <div class="example__scheme example__website-header">
+                    <a class="example__website-header__logo">
+                        <img src="https://www.coditt.com/images/LogoPlaceholder.png" alt="Logo">
+                        Website
+                    </a>
+                    <nav class="example__website-header__links">
+                        <ul>
+                            <li><a>Главная</a></li>
+                            <li><a>Галерея</a></li>
+                            <li><a>О Нас</a></li>
+                            <li><a>Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
+            <div class="css wrap">
+                <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                <code><span class="css property">display:</span> <span class="css value">flex</span><span class="css punctuation">;</span> <span class="css comment">/* or inline-flex */</span></code>
+                <code><span class="css punctuation">}</span></code>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="two-columns">
+        <h3 class="modal__title title">
+            <span>Макет "Два столбца"</span>
+            <a href="#" class="modal__close"><img src="img/menu/menu-close-btn.svg" alt="Close modal"></a>
+        </h3>
+        <div class="modal__content example">
+            <div class="modal__content__scheme">
+                <img src="img/examples/two-columns/two-columns.svg" class="modal__content__scheme-image" alt="Two columns">
+                <div class="example__scheme example__two-columns">
+                    <div class="example__two-columns__header">Шапка сайта</div>
+                    <div class="example__two-columns__column">Контент левого столбца</div>
+                    <div class="example__two-columns__column">Контент правого столбца</div>
+                    <div class="example__two-columns__header">Подвал сайта</div>
+                </div>
+            </div>
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
+            <div class="css wrap">
+                <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                <code><span class="css property">display:</span> <span class="css value">flex</span><span class="css punctuation">;</span> <span class="css comment">/* or inline-flex */</span></code>
+                <code><span class="css punctuation">}</span></code>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="holy-grail">
+        <h3 class="modal__title title">
+            <span>Макет "Два столбца"</span>
+            <a href="#" class="modal__close"><img src="img/menu/menu-close-btn.svg" alt="Close modal"></a>
+        </h3>
+        <div class="modal__content example">
+            <div class="modal__content__scheme">
+                <img src="img/examples/holy-grail/holy-grail.svg" class="modal__content__scheme-image" alt="Holy grail">
+                <div class="example__scheme example__holy-grail">
+                    <div class="example__holy-grail__header">Шапка сайта</div>
+                    <div class="example__holy-grail__sidebar">Левая боковая панель</div>
+                    <div class="example__holy-grail__main">Основное содержание страницы</div>
+                    <div class="example__holy-grail__sidebar">Правая боковая панель</div>
+                    <div class="example__holy-grail__header">Подвал сайта</div>
+                </div>
+            </div>
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
+            <div class="css wrap">
+                <code><span class="css selector">.container</span> <span class="css punctuation">{</span></code>
+                <code><span class="css property">display:</span> <span class="css value">flex</span><span class="css punctuation">;</span> <span class="css comment">/* or inline-flex */</span></code>
+                <code><span class="css punctuation">}</span></code>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="libs/mmenu-light/mmenu-light.js"></script>
