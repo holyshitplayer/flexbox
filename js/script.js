@@ -107,9 +107,9 @@ if (document.querySelector("[data-tab]")) {
 // МОДАЛЬНЫЕ ОКНА
 if (document.querySelector("[data-modal]")) {
     document.addEventListener("DOMContentLoaded", () => {
-        let overlay = document.createElement("div");
-        overlay.classList.add("modal__overlay");
-        document.body.insertBefore(overlay, document.querySelector("script"));
+        let container = document.createElement("div");
+        container.classList.add("modal__container");
+        document.body.insertBefore(container, document.querySelector("script"));
 
         let openButtons = document.querySelectorAll(".modal__open");
 
@@ -134,7 +134,7 @@ if (document.querySelector("[data-modal]")) {
     
                         codeIndents(modal);
     
-                        overlay.appendChild(modal);
+                        container.appendChild(modal);
                         closeButton.addEventListener("click", (e) => {
                             closeModal(e);
                         });
@@ -146,7 +146,7 @@ if (document.querySelector("[data-modal]")) {
                     });
                 };
 
-                overlay.classList.add("active");
+                container.classList.add("active");
                 document.body.style.overflow = "hidden";
             });
         });
@@ -159,7 +159,7 @@ if (document.querySelector("[data-modal]")) {
             };
         }, false);
 
-        overlay.addEventListener("click", (e) => {
+        container.addEventListener("click", (e) => {
             closeModal(e);
         });
 
@@ -169,7 +169,7 @@ if (document.querySelector("[data-modal]")) {
             let activeModal = document.querySelector(".modal.active")
             
             activeModal.classList.remove("active");
-            overlay.classList.remove("active");
+            container.classList.remove("active");
             document.body.style.overflow = "auto";
             setTimeout(() => activeModal.style.display = "none", 150)
         };
