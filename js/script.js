@@ -41,26 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
     let elementsDiv = document.createElement("div");
     elementsDiv.classList.add("elements");
     document.body.insertBefore(elementsDiv, document.querySelector(".header"));
-    
+
     let elements = ["img/elements/elem1.svg", "img/elements/elem2.svg", "img/elements/elem3.svg", "img/elements/elem4.svg"];
-    
+
     let pageWidth = document.body.clientWidth;
     let pageHeight = document.body.clientHeight;
-    
+
     let multiplierY = 300;
     let multiplierX = 300;
-    
+
     function random(min, max) {
         return min + Math.random() * (max - min);
     };
-    
+
     for (let row = 0; row < Math.round(pageHeight / multiplierY); row++) {
         for (let column = 1; column < Math.round(pageWidth / multiplierX); column++) {
             let topMin = row * multiplierY;
             let topMax = row + 1 < Math.round(pageHeight / multiplierY) ? (row + 1) * multiplierY : row;
             let leftMin = column * multiplierX;
             let leftMax = column + 1 < Math.round(pageWidth / multiplierX) ? (column + 1) * multiplierX : column;
-    
+
             let top = random(topMin, topMax);
             let left = random(leftMin, leftMax);
             let rotateAngle = random(0, 180);
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             idx = idx < elements.length ? idx : idx - 1;
             let element = elements[idx];
             let elementsDiv = document.querySelector(".elements");
-    
+
             let newElement = document.createElement("img");
             newElement.classList.add("elements__element");
             newElement.style.cssText += "top: " + top + "px;";
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             newElement.style.cssText += "transform: rotate(" + rotateAngle + "deg);";
             newElement.style.cssText += "animation-delay: " + animationDelay + "ms;";
             newElement.src = element;
-    
+
             elementsDiv.appendChild(newElement);
         };
     };
@@ -105,36 +105,50 @@ if (document.querySelector("[data-tab]")) {
 };
 
 // МОДАЛЬНЫЕ ОКНА
-if (document.querySelector(".modal")) {
+if (document.querySelector("[data-modal]")) {
     document.addEventListener("DOMContentLoaded", () => {
-        let overlayDiv = document.createElement("div");
-        overlayDiv.classList.add("modal__overlay");
-        document.body.insertBefore(overlayDiv, document.querySelector(".modal"));
+        let overlay = document.createElement("div");
+        overlay.classList.add("modal__overlay");
+        document.body.insertBefore(overlay, document.querySelector("script"));
 
-        let openButtons = document.querySelectorAll(".modal__open"),
-            closeButtons = document.querySelectorAll(".modal__close"),
-            overlay = document.querySelector(".modal__overlay");
-        
+        let modalContainer = document.createElement("div");
+        modalContainer.id = "modal__container";
+        document.body.insertBefore(modalContainer, document.querySelector("script"));
+
+        let openButtons = document.querySelectorAll(".modal__open");
+
         openButtons.forEach(openButton => {
             openButton.addEventListener("click", (e) => {
                 e.preventDefault();
+
                 let modalID = "#" + openButton.getAttribute("data-modal"),
                     modal = document.querySelector(modalID);
-                
-                modal.classList.add("active");
+
+                if (modal) {
+                    modal.classList.add("active");
+                } else {
+                    fetch("modals.html").then((response) => {
+                        return response.text();
+                    }).then((html) => {
+                        let parser = new DOMParser(),
+                            doc = parser.parseFromString(html, "text/html"),
+                            modal = doc.querySelector(modalID),
+                            closeButton = modal.querySelector(".modal__close");
+
+                        codeIndents(modal);
+
+                        modalContainer.appendChild(modal);
+                        closeButton.addEventListener("click", (e) => {
+                            closeModal(e);
+                        });
+                        modal.classList.add("active");
+                    }).catch((error) => {
+                        console.error("Ошибка при выполнении запроса.", error)
+                    });
+                }
+
                 overlay.classList.add("active");
                 document.body.style.overflow = "hidden";
-            });
-        });
-
-        closeButtons.forEach(closeButton => {
-            closeButton.addEventListener("click", (e) => {
-                e.preventDefault();
-                let parentModal = closeButton.closest(".modal");
-                
-                parentModal.classList.remove("active");
-                overlay.classList.remove("active");
-                document.body.style.overflow = "auto";
             });
         });
 
@@ -142,34 +156,32 @@ if (document.querySelector(".modal")) {
             let key = e.key;
             let activeModal = document.querySelector(".modal.active");
             if (activeModal && key == "Escape") {
-                let activeModal = document.querySelector(".modal.active");
-
-                activeModal.classList.remove("active");
-                overlay.classList.remove("active");
-                document.body.style.overflow = "auto";
+                closeModal(e);
             };
         }, false);
 
-        overlay.addEventListener("click", () => {
-            let activeModal = document.querySelector(".modal.active");
+        overlay.addEventListener("click", (e) => {
+            closeModal(e);
+        });
 
-            activeModal.classList.remove("active");
+        function closeModal(e) {
+            e.preventDefault();
+
+            document.querySelector(".modal.active").classList.remove("active");
             overlay.classList.remove("active");
             document.body.style.overflow = "auto";
-        });
+        };
     });
 };
 
-// ОТСТУПЫ У HTML РАЗМЕТКИ
-if (document.querySelector("code[data-level]")) {
-    document.addEventListener("DOMContentLoaded", () => {
-        let codeLines = document.querySelectorAll("code[data-level]");
-        codeLines.forEach(codeLine => {
-            let nestingLevel = codeLine.getAttribute("data-level"),
-                firstSpan = codeLine.firstChild;
-            let newSpan = document.createElement("span");
-            newSpan.innerHTML = "&nbsp;".repeat(4 * nestingLevel);
-            codeLine.insertBefore(newSpan, firstSpan);
-        });
+// ОТСТУПЫ У КОДА
+function codeIndents(doc) {
+    let codeLines = doc.querySelectorAll("code[data-level]");
+    codeLines.forEach(codeLine => {
+        let nestingLevel = codeLine.getAttribute("data-level"),
+            firstSpan = codeLine.firstChild;
+        let newSpan = document.createElement("span");
+        newSpan.innerHTML = "&nbsp;".repeat(4 * nestingLevel);
+        codeLine.insertBefore(newSpan, firstSpan);
     });
-};
+}
