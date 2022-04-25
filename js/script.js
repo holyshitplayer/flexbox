@@ -121,8 +121,7 @@ if (document.querySelector("[data-modal]")) {
                     modal = document.querySelector(modalID);
 
                 if (modal) {
-                    modal.classList.add("active");
-                    modal.style.display = "block";
+                    openModal(modal);
                 } else {
                     fetch("modals.html").then((response) => {
                         return response.text();
@@ -139,13 +138,12 @@ if (document.querySelector("[data-modal]")) {
                             closeModal(e);
                         });
     
-                        modal.classList.add("active");
-                        modal.style.display = "block";
+                        openModal(modal);
                     }).catch((error) => {
                         console.error("Ошибка при выполнении запроса.", error)
                     });
                 };
-
+                
                 container.classList.add("active");
                 document.body.style.overflow = "hidden";
             });
@@ -162,6 +160,14 @@ if (document.querySelector("[data-modal]")) {
         container.addEventListener("click", (e) => {
             closeModal(e);
         });
+
+        function openModal(modal) { 
+            modal.classList.add("active");
+            modal.style.display = "block";
+            modal.addEventListener("click", (e) => {
+                e.stopPropagation();
+            });
+        };
 
         function closeModal(e) {
             e.preventDefault();
