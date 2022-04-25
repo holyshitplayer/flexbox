@@ -111,10 +111,6 @@ if (document.querySelector("[data-modal]")) {
         overlay.classList.add("modal__overlay");
         document.body.insertBefore(overlay, document.querySelector("script"));
 
-        let modalContainer = document.createElement("div");
-        modalContainer.id = "modal__container";
-        document.body.insertBefore(modalContainer, document.querySelector("script"));
-
         let openButtons = document.querySelectorAll(".modal__open");
 
         openButtons.forEach(openButton => {
@@ -126,6 +122,7 @@ if (document.querySelector("[data-modal]")) {
 
                 if (modal) {
                     modal.classList.add("active");
+                    modal.style.display = "block";
                 } else {
                     fetch("modals.html").then((response) => {
                         return response.text();
@@ -134,14 +131,16 @@ if (document.querySelector("[data-modal]")) {
                             doc = parser.parseFromString(html, "text/html"),
                             modal = doc.querySelector(modalID),
                             closeButton = modal.querySelector(".modal__close");
-
+    
                         codeIndents(modal);
-
-                        modalContainer.appendChild(modal);
+    
+                        overlay.appendChild(modal);
                         closeButton.addEventListener("click", (e) => {
                             closeModal(e);
                         });
+    
                         modal.classList.add("active");
+                        modal.style.display = "block";
                     }).catch((error) => {
                         console.error("Ошибка при выполнении запроса.", error)
                     });
@@ -167,9 +166,12 @@ if (document.querySelector("[data-modal]")) {
         function closeModal(e) {
             e.preventDefault();
 
-            document.querySelector(".modal.active").classList.remove("active");
+            let activeModal = document.querySelector(".modal.active")
+            
+            activeModal.classList.remove("active");
             overlay.classList.remove("active");
             document.body.style.overflow = "auto";
+            setTimeout(() => activeModal.style.display = "none", 150)
         };
     });
 };

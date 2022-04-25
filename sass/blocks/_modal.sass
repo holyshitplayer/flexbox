@@ -4,15 +4,12 @@
     width: 80%
     padding: 15px
     max-height: 85%
-    position: fixed
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
     z-index: 101
     box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2)
     border-radius: 10px
     background-color: #ffffff
-    overflow-y: auto
+    overflow-y: scroll
+    position: relative
     transition: opacity .15s ease, visibility .15s ease
     &.active
         opacity: 1
@@ -28,8 +25,11 @@
         height: 100%
         background-color: rgba(0, 0, 0, .6)
         z-index: 100
+        display: flex
+        justify-content: center
+        align-items: center
         transition: opacity .15s ease, visibility .15s ease
-        //backdrop-filter: blur(2px)
+        backdrop-filter: blur(2px)
         &.active
             opacity: 1
             visibility: visible
