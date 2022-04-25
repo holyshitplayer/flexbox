@@ -145,7 +145,7 @@ if (document.querySelector("[data-modal]")) {
                     }).catch((error) => {
                         console.error("Ошибка при выполнении запроса.", error)
                     });
-                }
+                };
 
                 overlay.classList.add("active");
                 document.body.style.overflow = "hidden";
@@ -184,4 +184,10 @@ function codeIndents(doc) {
         newSpan.innerHTML = "&nbsp;".repeat(4 * nestingLevel);
         codeLine.insertBefore(newSpan, firstSpan);
     });
-}
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.querySelector("code[data-level]")) {
+        codeIndents(document);
+    };
+});
