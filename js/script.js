@@ -47,15 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let pageWidth = document.body.clientWidth;
     let pageHeight = document.body.clientHeight;
 
-    let multiplierY = 300;
-    let multiplierX = 300;
+    let multiplierY = 450;
+    let multiplierX = 450;
 
     function random(min, max) {
         return min + Math.random() * (max - min);
     };
 
-    for (let row = 0; row < Math.round(pageHeight / multiplierY); row++) {
-        for (let column = 1; column < Math.round(pageWidth / multiplierX); column++) {
+    for (let row = 0; row <= Math.round(pageHeight / multiplierY); row++) {
+        for (let column = 1; column <= Math.round(pageWidth / multiplierX); column++) {
             let topMin = row * multiplierY;
             let topMax = row + 1 < Math.round(pageHeight / multiplierY) ? (row + 1) * multiplierY : row;
             let leftMin = column * multiplierX;

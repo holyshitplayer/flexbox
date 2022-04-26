@@ -72,6 +72,7 @@
             width: 100%
     .modal
         width: calc( 100% - 40px )
+        max-height: calc( 100% - 40px )
     .example
         &__pricing-tables
             &__trial
@@ -110,13 +111,15 @@
             transform: skew(0, 0)
         &__example
             height: 300px
-            width: 300px
+            img
+                max-width: 280px
     .footer
         padding: 10px 0
         margin-top: 50px
     .page-content
         padding: 0
         box-shadow: none
+        background-color: transparent
     .page-banner
         height: 180px
         margin-bottom: 30px
@@ -264,7 +267,7 @@
     .footer
         text-align: center
     .page-banner
-        height: 120px
+        height: 90px
         &__background
             font-size: 2rem
             letter-spacing: 0
