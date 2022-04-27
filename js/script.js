@@ -1,10 +1,9 @@
 // ПОДСВЕТКА АКТИВНОЙ ССЫЛКИ
-let menuLinks = document.getElementsByClassName("header__menu__link")
+let menuLinks = document.getElementsByClassName("header__menu__link");
 for (let i = 0; i < menuLinks.length; i++) {
-    let menuLink = (menuLinks[i].href).replace("#", "")
-    let url = (window.location.href).replace("#", "")
-    let pathname = window.location.pathname
-    if (menuLink == url) {
+    let menuLink = menuLinks[i].pathname;
+    let pathname = window.location.pathname;
+    if (menuLink == pathname) {
         menuLinks[i].classList.add("active");
     } else if (pathname == "/" || pathname == "/web-t/") {
         menuLinks[0].classList.add("active");
@@ -55,11 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     for (let row = 0; row <= Math.round(pageHeight / multiplierY); row++) {
-        for (let column = 1; column <= Math.round(pageWidth / multiplierX); column++) {
+        for (let column = 0; column <= Math.round(pageWidth / multiplierX); column++) {
             let topMin = row * multiplierY;
-            let topMax = row + 1 < Math.round(pageHeight / multiplierY) ? (row + 1) * multiplierY : row;
+            let topMax = row + 1 <= Math.round(pageHeight / multiplierY) ? (row + 1) * multiplierY : row;
             let leftMin = column * multiplierX;
-            let leftMax = column + 1 < Math.round(pageWidth / multiplierX) ? (column + 1) * multiplierX : column;
+            let leftMax = column + 1 <= Math.round(pageWidth / multiplierX) ? (column + 1) * multiplierX : column;
 
             let top = random(topMin, topMax);
             let left = random(leftMin, leftMax);
@@ -90,10 +89,12 @@ if (document.querySelector("[data-tab]")) {
     tabLinks.forEach(tabLink => {
         tabLink.addEventListener("click", (e) => {
             e.preventDefault();
+
             let linkActive = document.querySelector(".sections__examples__tab-links a.active");
             let tabActive = document.querySelector(".sections__example.active");
             let tabIndex = tabLink.getAttribute("data-tab");
             let tabContent = document.querySelector('.sections__example[data-tab="' + tabIndex + '"]');
+
             if (tabIndex != tabActive.getAttribute("data-tab")) {
                 linkActive.classList.remove("active");
                 tabActive.classList.remove("active");
@@ -172,12 +173,12 @@ if (document.querySelector("[data-modal]")) {
         function closeModal(e) {
             e.preventDefault();
 
-            let activeModal = document.querySelector(".modal.active")
+            let activeModal = document.querySelector(".modal.active");
             
             activeModal.classList.remove("active");
             container.classList.remove("active");
             document.body.style.overflow = "auto";
-            setTimeout(() => activeModal.style.display = "none", 150)
+            setTimeout(() => activeModal.style.display = "none", 150);
         };
     });
 };
@@ -185,11 +186,13 @@ if (document.querySelector("[data-modal]")) {
 // ОТСТУПЫ У КОДА
 function codeIndents(doc) {
     let codeLines = doc.querySelectorAll("code[data-level]");
+
     codeLines.forEach(codeLine => {
         let nestingLevel = codeLine.getAttribute("data-level"),
             firstSpan = codeLine.firstChild;
         let newSpan = document.createElement("span");
         newSpan.innerHTML = "&nbsp;".repeat(4 * nestingLevel);
+
         codeLine.insertBefore(newSpan, firstSpan);
     });
 };
