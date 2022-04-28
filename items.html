@@ -37,7 +37,7 @@
                 <h1 class="page-banner__title">Элементы</h1>
             </section>
             <section class="page-content">
-                <div class="page-block">
+                <div class="page-block" id="order">
                     <h3 class="page-block__title title">order</h3>
                     <div class="page-block__content">
                         <p>По умолчанию flex-элементы располагаются в исходном порядке. Однако с помощью свойства order можно изменить порядок, в котором они появляются в flex-контейнере.</p>
@@ -69,7 +69,7 @@
                         <p>Элементы с одинаковым значением order  располагаются в том порядке, в каком они находятся в исходном коде .</p>
                     </div>
                 </div>
-                <div class="page-block">
+                <div class="page-block" id="flex-grow">
                     <h3 class="page-block__title title">flex-grow</h3>
                     <div class="page-block__content">
                         <p>Это свойство определяет способность flex-элемента увеличиваться при необходимости. Оно принимает значение, которое служит пропорцией. Свойство определяет, какое количество доступного пространства внутри flex-контейнера должен занимать элемент.</p>
@@ -98,7 +98,7 @@
                         <p>Отрицательные числа недействительны.</p>
                     </div>
                 </div>
-                <div class="page-block">
+                <div class="page-block" id="flex-shrink">
                     <h3 class="page-block__title title">flex-shrink</h3>
                     <div class="page-block__content">
                         <p>Это свойство определяет способность flex-элемента сжиматься при необходимости.</p>
@@ -110,7 +110,7 @@
                         <p>Отрицательные числа недействительны.</p>
                     </div>
                 </div>
-                <div class="page-block">
+                <div class="page-block" id="flex-basis">
                     <h3 class="page-block__title title">flex-basis</h3>
                     <div class="page-block__content">
                         <p>Это свойство определяет размер элемента по умолчанию по основной оси. Размер может быть задан вручную (например, 20%, 5rem и т. д.) или с помощью ключевого слова. Ключевое слово auto использует свойство ширина элемента (что временно выполнялось ключевым словом main-size, пока оно не стало устаревшим). Ключевое слово content означает «размер на основе содержимого элемента» — это ключевое слово еще недостаточно хорошо поддерживается браузерами, поэтому его пока не используют, также как и значения max-content, min-content и fit-content.</p>
@@ -122,7 +122,7 @@
                         <p>Если установлено значение 0, дополнительного пространства вокруг содержимого не будет. Если установлено значение auto, дополнительное пространство рассчитывается на основе значения flex-grow элемента.</p>
                     </div>
                 </div>
-                <div class="page-block">
+                <div class="page-block" id="flex">
                     <h3 class="page-block__title title">flex</h3>
                     <div class="page-block__content">
                         <p>Это сокращение для свойств flex-grow, flex-shrink и flex-basis. Второй и третий параметры (flex-shrink и flex-basis) являются необязательными. Значение по умолчанию — 0 1 auto, но если Вы измените его с помощью одного числового значения, например flex: 5, это изменит flex-basis на 0% и значения свойств будут такими: flex-grow: 5; flex-shrink: 1; flex-basis: 0%;.</p>
@@ -134,7 +134,7 @@
                         <p><b>Рекомендуется использовать это сокращение</b>, а не задавать отдельные свойства. Сокращение разумно устанавливает другие значения.</p>
                     </div>
                 </div>
-                <div class="page-block">
+                <div class="page-block" id="align-self">
                     <h3 class="page-block__title title">align-self</h3>
                     <div class="page-block__content">
                         <p>Это позволяет переопределить выравнивание элемента по текущей flex-строке по умолчанию (или заданное свойство align-items) для отдельных flex-элементов.</p>
@@ -151,7 +151,7 @@
                                 <span>align-self: flex-end</span>
                             </div>
                         </div>
-                        <p>См. <a href="items.html">align-items</a>, чтобы понять доступные значения.</p>
+                        <p>См. <a href="container.html#align-items">align-items</a>, чтобы понять доступные значения.</p>
                         <div class="css wrap">
                             <code data-level="0"><span class="css selector">.item</span> <span class="css punctuation">{</span></code>
                             <code data-level="1"><span class="css property">align-self:</span> <span class="css value">auto | flex-start | flex-end | center | baseline | stretch</span><span class="css punctuation">;</span> <span class="css comment">/* default is auto */</span></code>
