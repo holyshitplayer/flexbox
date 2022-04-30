@@ -111,7 +111,9 @@
                 a:nth-child(2)
                     display: none
         &__scheme
-            transform: skew(0, 0)
+            transform: skew(0)
+            &:hover
+                transform: skew(0) scale(1.01)
         &__example
             height: 300px
             img
