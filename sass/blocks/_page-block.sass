@@ -265,6 +265,11 @@
                 max-height: 100%
                 max-width: 100%
                 opacity: 0.75
+                will-change: transform
+                transition: transform .15s ease
+            &:hover
+                img
+                    transform: scale(1.02)
         &__content
             flex: 1 1 auto
             padding: 20px
