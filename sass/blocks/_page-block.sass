@@ -288,3 +288,74 @@
         &__title
             margin: 0
             +bold
+    &__browsers
+        margin-top: 10px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        row-gap: 10px
+        &__platform
+            width: 100%
+            display: flex
+            justify-content: space-between
+            overflow-x: auto
+            background: linear-gradient(135deg, #56ccf2 0%, #2f80ed 100%)
+            padding: 10px
+            padding-top: 30px
+            border-radius: 10px
+            position: relative
+            will-change: transform
+            transition: transform .15s ease
+            &:hover
+                transform: scale(1.01)
+        &__platform-title
+            position: absolute
+            left: 0
+            right: 0
+            top: 4px
+            text-align: center
+            cursor: default
+            opacity: 0.5
+            +bold
+    &__browser
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+        flex-shrink: 0
+        padding: 8px
+        position: relative
+        width: calc( 100% / 5 - 40px / 5 )
+        cursor: default
+        will-change: transform
+        transition: transform .15s ease
+        +bold
+        &:hover
+            transform: scale(1.03)
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            top: 0
+            bottom: 0
+            background-color: #ffffff
+            opacity: 0.5
+            height: 100%
+            width: 100%
+            border-radius: 10px
+            z-index: 1
+        &__title
+            z-index: 2
+            img
+                width: 48px
+                height: 48px
+            span
+                display: block
+                opacity: 0.75
+                margin-top: 4px
+        &__version
+            margin-top: 0!important
+            opacity: 0.75
+            z-index: 2

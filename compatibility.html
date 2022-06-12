@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Новый стандарт вёрстки Flexbox. Детальное руководство">
+    <title>Совместимость</title>
+    <link rel="shortcut icon" href="img/general/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="libs/mmenu-light/mmenu-light.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!--OpenGraph-->
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Новый стандарт вёрстки Flexbox. Детальное руководство">
+    <meta property="og:description" content="Изучите новый стандарт вёрстки применяя Flexbox по новому детальному руководству!">    <meta property="og:url" content="https://holyshitplayer.github.io/kyuubi/">
+    <meta property="og:url" content="https://holyshitplayer.github.io/web-t">
+    <meta property="og:image" content="img/general/og-img.jpg">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__links">
+                <a class="header__links__logo" href="index.html">Flexbox</a>
+                <a class="header__menu__open-menu" href="#menu"><img src="img/menu/menu-btn.svg" alt="Open menu"></a>
+                <nav class="header__menu">
+                    <div class="header__menu__close-menu"><img src="img/menu/menu-close-btn.svg" alt="Close menu"></div>
+                    <ul>
+                        <li><a class="header__menu__link" href="index.html">Главная</a></li>
+                        <li><a class="header__menu__link" href="theory.html">Терминология</a></li>
+                        <li><a class="header__menu__link" href="container.html">Контейнер</a></li>
+                        <li><a class="header__menu__link" href="items.html">Элементы</a></li>
+                        <li><a class="header__menu__link" href="examples.html">Примеры</a></li>
+                        <li><a class="header__menu__link" href="compatibility.html">Совместимость</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-container">
+            <section class="page-banner">
+                <p class="page-banner__background">Compatibility</p>
+                <h1 class="page-banner__title">Совместимость</h1>
+            </section>
+            <section class="page-content">
+                <div class="page-block">
+                    <h3 class="page-block__title title">История Flexbox</h3>
+                    <div class="page-block__content">
+                        <p>Как  и все спецификации CSS, flexbox претерпела огромное количество изменений, прежде чем стать Кандидатом в рекомендации W3C. У спецификации в этом статусе не должно быть значительных изменений, однако с предыдущими итерациями все было иначе.</p>
+                        <p>Flexbox был реализован экспериментальным путём в нескольких браузерах. В то время метод создания экспериментальных реализаций подразумевал использование вендорных префиксов. Идея этих префиксов была в том, чтобы позволить инженерам браузеров и веб-разработчикам исследовать и протестировать новшества спецификации без конфликтов с другими реализациями. Идея заключалась в том, чтобы не использовать экспериментальные реализации на продакшене. Однако, в конечном счёте префиксы всё равно попали в продакшн, и изменения в экспериментальной спецификации вынудили людей обновлять сайты, чтобы этой самой спецификации соответствовать.</p>
+                        <p>В 2009 спецификация выглядела совсем по-другому. Чтобы создать flex-контейнер, вам нужно было использовать display: box и несколько box-* свойств, которые делали то, что сегодня вы понимаете под flexbox.</p>
+                        <p>Очередное обновление спецификации поменяло синтаксис на display: flexbox — и опять с вендорными префиксами.</p>
+                        <p>В конечном счёте спецификация была обновлена, чтобы определить display: flex как способ создания flex-контейнера. Начиная с этого момента поддержка браузерами обновлённой версии спецификации отличная.</p>
+                        <p>Существует несколько старых статей, которые описывают более ранние версии flexbox, их довольно легко вычислить по тому, как они описывают создание flex-контейнера. Если вы нашли что-то вроде  display: box или display: flexbox, то это уже устаревшая информация.</p>
+                    </div>
+                </div>
+                <div class="page-block">
+                    <h3 class="page-block__title title">Поддержка браузерами</h3>
+                    <div class="page-block__content">
+                        <p><b>Flexbox</b> очень хорошо поддерживается современными браузерами, однако есть несколько проблем, с которыми вы могли столкнуться. В этом руководстве мы рассмотрим, насколько хорошо Flexbox поддерживается браузерами, а так же некоторые потенциальные проблемы, ресурсы и методы для создания обходных путей и запасных вариантов.</p>
+                        <p>Ниже представлены схемы поддержки Flexbox различными браузерами. Данные взяты с сайта <a href="https://caniuse.com/flexbox" class="in-text-link" target="_blank" rel="noreferrer noopener">Caniuse</a>.</p>
+                        <div class="page-block__browsers">
+                            <div class="page-block__browsers__platform">
+                                <p class="page-block__browsers__platform-title">Desktop Browsers</p>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/edge.webp" alt="Edge logo">
+                                        <span>Edge</span>
+                                    </p>
+                                    <p class="page-block__browser__version">12+</p>
+                                </div>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/firefox.webp" alt="Firefox logo">
+                                        <span>Firefox</span>
+                                    </p>
+                                    <p class="page-block__browser__version">28+</p>
+                                </div>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/chrome.webp" alt="Chrome logo">
+                                        <span>Chrome</span>
+                                    </p>
+                                    <p class="page-block__browser__version">21+</p>
+                                </div>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/safari.webp" alt="Safari logo">
+                                        <span>Safari</span>
+                                    </p>
+                                    <p class="page-block__browser__version">6.1+</p>
+                                </div>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/opera.webp" alt="Opera logo">
+                                        <span>Opera</span>
+                                    </p>
+                                    <p class="page-block__browser__version">12.1+</p>
+                                </div>
+                            </div>
+                            <div class="page-block__browsers__platform">
+                                <p class="page-block__browsers__platform-title">Mobile Browsers</p>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/firefox.webp" alt="Firefox logo">
+                                        <span>Firefox</span>
+                                    </p>
+                                    <p class="page-block__browser__version">101+</p>
+                                </div>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/chrome.webp" alt="Chrome logo">
+                                        <span>Chrome</span>
+                                    </p>
+                                    <p class="page-block__browser__version">102+</p>
+                                </div>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/safari.webp" alt="Safari logo">
+                                        <span>Safari</span>
+                                    </p>
+                                    <p class="page-block__browser__version">7+</p>
+                                </div>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/opera.webp" alt="Opera Mini logo">
+                                        <span>Opera Mini</span>
+                                    </p>
+                                    <p class="page-block__browser__version">все</p>
+                                </div>
+                                <div class="page-block__browser">
+                                    <p class="page-block__browser__title">
+                                        <img src="img/compatibility/opera.webp" alt="Opera Mobile logo">
+                                        <span>Opera Mobile</span>
+                                    </p>
+                                    <p class="page-block__browser__version">12.1+</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__info">
+                <a class="footer__info__logo" href="index.html">Flexbox</a>
+                <p class="footer__info__text">Новый стандарт вёрстки Flexbox. Детальное руководство</p>
+                <p class="footer__info__author">© Дмитрий Сергеев</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="libs/mmenu-light/mmenu-light.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
